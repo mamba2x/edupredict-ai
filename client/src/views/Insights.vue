@@ -18,8 +18,6 @@ ChartJS.register(
   PointElement, LineElement, Filler,
 )
 
-const API = 'http://localhost:8000'
-
 const data    = ref(null)
 const loading = ref(true)
 const error   = ref('')
