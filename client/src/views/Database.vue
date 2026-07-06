@@ -1,9 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import axios from 'axios'
+import api from '../services/api'
 import { store } from '../store.js'
-
-const API = 'http://localhost:8000'
 
 const records = ref([])
 const totalRecords = ref(0)
@@ -28,7 +26,7 @@ watch([searchQuery, filterStatus], () => {
 
 async function fetchRecords() {
   try {
-    const res = await axios.get(`${API}/records?t=${new Date().getTime()}`)
+    const res = await api.get(`/records?t=${new Date().getTime()}`)
     records.value = res.data.records
     totalRecords.value = res.data.total || res.data.records.length
   } catch (err) {

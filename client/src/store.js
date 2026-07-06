@@ -2,8 +2,6 @@ import { reactive } from 'vue'
 import { statsService } from './services/statsService'
 import { recordService } from './services/recordService'
 
-const API = 'http://localhost:8000'
-
 export const store = reactive({
   stats: {
     total_students: 0,

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import axios from 'axios'
+import api from '../services/api'
 import { store } from '../store.js'
 import { Bar, Doughnut, Radar, Line } from 'vue-chartjs'
 import {
@@ -31,7 +31,7 @@ const filters = ['All', 'Excellent', 'Average', 'At-Risk']
 
 async function fetchInsights() {
   try {
-    const res = await axios.get(`${API}/insights`)
+    const res = await api.get('/insights')
     data.value = res.data
   } catch (e) {
     error.value = 'Could not load insights. Please make sure the server is running and train.py has been executed.'
