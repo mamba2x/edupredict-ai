@@ -29,4 +29,4 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_URL
-        value: https://edupredict-api.onrender.com
+        value: https://edupredict-ai-abgr.onrender.com
