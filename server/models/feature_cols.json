@@ -1,0 +1,19 @@
+[
+  "Gender",
+  "Age",
+  "Socioeconomic_Status",
+  "Level",
+  "Semester",
+  "Study_Hours_Per_Week",
+  "Previous_CGPA",
+  "Previous_Course_Average",
+  "Lowest_Previous_Score",
+  "Weak_Previous_Count",
+  "Course_CA_Average",
+  "Lowest_CA_Score",
+  "Weak_CA_Count",
+  "Core_CA_Average",
+  "Elective_CA_Average",
+  "University_CA_Average",
+  "Total_Units"
+]

@@ -1,0 +1,902 @@
+0: DEVELOPMENT OF AN ACADEMIC PERFORMANCE PREDICTION SYSTEM USING MACHINE LEARNING ALGORITHM
+1: BY
+2: OKEKE MICHEAL IKENNA
+3: 22CD032179
+4: A PROJECT SUBMITTED TO THE
+5: DEPARTMENT OF COMPUTER AND INFORMATION
+6: SCIENCES, COLLEGE OF SCIENCE AND TECHNOLOGY,
+7: COVENANT UNIVERSITY OTA, OGUN STATE.
+8: IN PARTIAL FULFILMENT OF THE REQUIREMENTS FOR
+9: THE AWARD OF THE BACHELOR OF SCIENCE
+10: (HONOURS) DEGREE IN COMPUTER SCIENCE
+11: NOVEMBER, 2026
+12: CERTIFICATION
+13: I hereby certify that this project was carried out by Okeke Micheal Ikenna in the Department of Computer and Information Sciences, College of Science and Technology, Covenant University, Ogun State, Nigeria, under my supervision.
+14: Dr Oluranti Jonathan___________________________
+15: Supervisor           Signature and Date
+16: Prof. Aderonke Oni___________________________
+17: Head of Department           Signature and Date
+18: DEDICATION
+19: I dedicate this project to God, the source of my knowledge, inspiration, and perseverance. I also dedicate this work to my parents, siblings, and loved ones, whose sacrifices, guidance, and unwavering support have shaped my academic pursuit. Their belief in me has been my greatest motivation.
+20: ACKNOWLEDGEMENT
+21: I would like to express my sincere gratitude to, Dr. Oluranti Jonathan, my project supervisor, for their guidance, support, and encouragement throughout the course of this project. their insights and constructive feedback were invaluable in shaping the direction and quality of this work.
+22: CERTIFICATIONii
+23: DEDICATIONiii
+24: ACKNOWLEDGEMENTiv
+25: LIST OF FIGURESviii
+26: LIST OF TABLESix
+27: ABBREVIATIONSx
+28: CHAPTER ONE1
+29: 1.1Background Of Study1
+30: 1.2Statement of the Problem2
+31: 1.3Aim and Objectives3
+32: 1.4Methodology3
+33: 1.5Significance of the Study5
+34: 1.6Scope of The Study6
+35: 1.1Project Outline7
+36: CHAPTER TWO8
+37: LITERATURE REVIEW8
+38: 2.1 Preamble8
+39: 2.2 Conceptual Review8
+40: 2.2.1 Student Academic Performance8
+41: 2.2.2 Educational Data Mining9
+42: 2.2.3 Learning Analytic11
+43: 2.2.4 Academic Performance Indicators13
+44: 2.2.5 Early Warning Systems14
+45: 2.3 Review of Student Performance Prediction System for University Services17
+46: 2.4 Review of Relevant Machine Learning Concepts18
+47: 2.4.1 Machine Learning (ML)18
+48: 2.4.2 Supervised Learning20
+49: 2.4.3 Common ML Algorithms for Prediction22
+50: 2.4.4 Data Pre-processing Techniques24
+51: 2.4.5 Model Evaluation Metrics25
+52: 2.5 REVIEW OF RELATED METHODS26
+53: 2.5.1 Feature engineering method.26
+54: 2.5.2 Classification-Based Techniques26
+55: 2.5.3 Ensemble-based Learning Strategies27
+56: 2.5.4 Neural Network Techniques27
+57: 2.5.5 Comparison Performance Evaluation27
+58: 2.6 Review of Existing Systems28
+59: 2.6.1 Traditional Student Monitoring Systems28
+60: 2.6.2 Automated Student Performance Prediction Systems28
+61: 2.6.3 University Early Warning System28
+62: 2.6.4 AI-Based Academic Risk Detection Platforms29
+63: 2.7 Summary of Literature Review29
+64: CHAPTER THREE30
+65: RESEARCH METHODOLOGY30
+66: 3.1 Preamble30
+67: 3.2 Research Design30
+68: 3.2.1 Justification for Research Design31
+69: 3.3 Population of the Study32
+70: 3.3.1 Dataset as Population Representation32
+71: 3.3.2 Unit of Analysis and Generalisability33
+72: 3.4 Sample and Sampling Technique34
+73: 3.4.1 Composition and Combination of the Working Dataset34
+74: 3.4.2 Data Partitioning35
+75: 3.4.3 Sampling Method and Class Representation35
+76: 3.5 Instrument for Data Collection35
+77: 3.5.1 Description of Variables in the Dataset36
+78: 3.5.2 Outcome Variable and Operationalisation37
+79: 3.6 Validity and Reliability of the Instrument38
+80: 3.6.1 Dataset and Construct Validity38
+81: 3.6.2 Reliability, Reproducibility and Threats to Validity39
+82: 3.6.3 Performance Evaluation Framework39
+83: 3.7 Method of Data Collection and Data Preprocessing41
+84: 3.7.1 Dataset Acquisition, Combination and Preliminary Inspection41
+85: 3.7.2 Encoding of Categorical and Ordinal Variables41
+86: 3.7.3 Feature Scaling and Prevention of Data Leakage42
+87: 3.7.4 Feature Retention, Prediction Timing and Interpretability42
+88: 3.8 Method of Data Analysis44
+89: 3.8.1 Machine Learning Algorithms and Rationale45
+90: 3.8.2 Model Training, Evaluation and Selection Process46
+91: 3.8.3 Software and Development Tools46
+92: 3.8.4 System Development Architecture and Prediction Workflow47
+93: 3.9 Ethical Considerations48
+94: 3.9.1 Data Privacy and Confidentiality49
+95: 3.9.2 Bias, Sensitive Variables and Fairness49
+96: 3.9.3 Responsible Use of the Predictive System49
+97: 3.9.4 Contextual Limitation and Deployment Safeguards50
+98: 3.10 Chapter Summary51
+99: LIST OF FIGURES
+100: FIGURE                        TITLE OF FIGURESPAGES
+101: 2.1               Broad Categorisation of a Student Prediction Performance System24
+102: 2.2               Conceptual Framework of Student Performance Prediction25
+103: 2.3        General Machine Level Workflow30
+104: 3.1        Overall Research Methodology Workflow for EduPredict AI31
+105: 3.2        Composition of the Student Performance Dataset Used in the Study32
+106: 3.3        Data Preprocessing Workflow for EduPredict AI36
+107: 3.4        Machine Learning Training, Evaluation and Model Selection Process37
+108: 3.5        Deployment Architecture of the EduPredict AI System39
+109: LIST OF TABLES
+110:   TABLE             TITLE OF TABLES PAGES
+111:      1.1     Objectives-Methodology Mapping Table                   12
+112:      2.1     Summary of Machine Learning Algorithms Table                    18
+113:     2.2    Data Features Used in Student Performance Prediction                   22
+114:     2.3    Performance Comparison of Common ML Algorithm                             32
+115:     3.1               Groups of Variables Available in the Student Performance Dataset           33
+116:     3.2   Dataset Components and Original Outcome Variable            33
+117:     3.3   Data Preparation Operations Applied in the Study            35
+118:     3.4  Candidate Machine Learning Algorithms Considered in EduPredict AI36
+119:     3.5   Software Technologies Used in EduPredict AI                        38
+120: ABBREVIATIONS
+121: API Application Programming Interface
+122: ARFF Attribute-Relation File Format
+123: CSV Comma Separated Values
+124: EDM Educational Data Mining
+125: EWS Early Warning System
+126: FPR False Positive Rate
+127: GPA Grade Point Average
+128: IAO Interest, Attitude, and Opinion
+129: KNN K-Nearest Neighbor
+130: LA Learning Analytics
+131: ML Machine Learning
+132: MLP Multilayer Perceptron
+133: ROC Receiver Operating Characteristic
+134: SIS Student Information Systems
+135: SMO Sequential Minimal Optimization
+136: SVM Support Vector Machine
+137: TPR True Positive Rate
+138: VLE Virtual Learning Environment
+139: CHAPTER ONE
+140:        INTRODUCTION
+141: Background Of Study
+142: Student academic performance prediction has emerged as a burning issue of concern to educational institutions around the world in an effort to boost student success and the effectiveness of a given institution. as highlighted in recent reviews on EDM for retention (Romero & Ventura, 2020).Manual evaluation of student progress through traditional means of monitoring and evaluation is cumbersome in terms of scale and accuracy Hellas et al. (2018). High accuracy of predicting student performance is vital in identifying the student having problems in the academic process in the early stages of their learning process Belachew & Gobena (2017). Schools have a complicated problem of critically evaluating the achievements of students, finding the specific trends, and creating the approaches to their further academic development and achievement Francis & Babu (2021); Yousafzai et al. (2021). It becomes more challenging to manually track academic records and predict outcomes of students as the student populations are increasing, more so because each student may need a unique approach to improve their academic results Hellas et al. (2018). 
+143: New opportunities of solving these challenges have appeared in educational contexts due to the development of machine learning technologies. Machine learning methods are able to find patterns and models in the educational data and give significant information in decision making Belachew & Gobena, (2017). Such data-driven methods allow to explore huge volumes of education data in a variety of perspectives, derive useful correlations and forecasts that could not be found by hand Waheed et al. (2020). , enabling proactive interventions (Uçar et al., 2022). 
+144: Recent studies have shown that student performance prediction systems based on machine learning can obtain high accuracy rates, and some of them report accuracy as high as 90.57% in terms of ensemble Hasan et al (2021); Alomari et al. (2023).Moreover, these systems will be able to integrate various variables outside of the traditional academic performance, such as demographic data, personality traits, and psychographic ones, to make more precise and detailed projections Amrieh et al. (2016); Waheed et al. (2020). 
+145: The importance of this field of research is not just limited to the accuracy of prediction but because of these systems, strategies of early intervention can be developed, personalized learning techniques are built, and better allocations of resources in educational establishments can be achieved which leads to better student achievement and performance of the institutions.
+146: Statement of the Problem
+147: Academic performance has a big problem facing educational institutions of the world that may need to anticipate and manage effectively these student performances directly affects the performance of every student and the overall effectiveness of an institution. The manual nature of the conventional student-progress monitoring system fails to help in the identification of at-risk students promptly and in most cases, the intervention may be implemented too late to stop any academic failure Belachew & Gobena (2017); Francis & Babu (2021); Yousafzai et al. (2021). Teachers can hardly keep track of and analyze academic records of high numbers of students manually, especially when a single student might need a different approach to enhance their performance Hellas et al.(2018). 
+148: Moreover, a significant number of learning organizations do not have appropriate systematic methods of student performance monitoring and analysis, and the evaluation standards are not consistent between various institutions Asif et al. (2017)., exacerbating resource inefficiencies (Villano et al., 2018). Current prediction tools mainly focus on previous academic results only, not taking into account other factors, which are equally significant to student performance, which include demographics, characteristics of personality, and psychographics Amrieh et al. (2016); Waheed et al. (2020). 
+149: This is due to the lack of effective early warning systems and therefore institutions are unable to offer timely counseling, further training, or special interventions to the at-risk students before they start performing poorly in academics Hasan et al (2021); Alomari et al. (2023).The sum of these related issues is increased dropout, decreased student satisfaction, poor resource allocation, and low institutional performance, necessitating coordinated, empirical solutions that would allow predicting student performance with established accuracy and respond to educational intervention proactively.
+150: Aim and Objectives
+151: Aim:
+152: To develop and evaluate a machine learning-based academic performance prediction system using real secondary educational data in order to support informed academic monitoring and student-support decision-making.
+153: Objectives:
+154: To obtain and prepare real secondary educational performance data containing academic, demographic, social and school-related attributes for predictive analysis.
+155: To examine the attributes represented in the Student Performance dataset and prepare them appropriately for machine learning model development.
+156: To develop and compare candidate machine learning models for predicting student academic performance outcomes.
+157: To evaluate the developed models using performance measures appropriate to the final prediction outcome implemented in the system.
+158: To develop a web-based prototype that enables users to submit relevant student attributes and obtain an academic performance prediction output.
+159: To discuss the ethical, privacy and contextual limitations associated with applying machine learning to student-performance prediction.
+160: Methodology
+161: This study adopted a quantitative predictive research design and a system development approach for the development of EduPredict AI. The study used the Student Performance dataset obtained from the UCI Machine Learning Repository. The dataset was originally compiled from school reports and questionnaires relating to students in two Portuguese secondary schools and was made available for academic performance prediction research (Cortez, 2008; Cortez & Silva, 2008).
+162: Two subject-specific files were used in the study: student-mat.csv, containing 395 Mathematics records, and student-por.csv, containing 649 Portuguese language records. These files were combined to produce a working dataset of 1,044 student-subject performance records. The combined total was treated as subject-performance records rather than verified unique students because a student who studied both subjects may appear in both source files.
+163: The dataset contained demographic, family, social, school-related and academic attributes. These included variables such as sex, age, parental educational background, study time, previous failures, school support, family support, extracurricular activity participation, internet access, absences and academic grades. The original academic outcome variable was G3, which represented the final subject grade on a scale of 0 to 20, while G1 and G2 represented earlier grading-period outcomes in the same subject.
+164: The dataset was prepared for predictive analysis through appropriate inspection and transformation of its attributes. Categorical variables were converted into numerical representations suitable for machine learning, while scale-sensitive numerical predictors were standardised through a training-fitted scaling procedure where required. The data were divided into training and testing subsets using an 80:20 holdout strategy, producing 835 records for training and 209 records for testing. The testing subset was reserved for evaluating predictive performance on records not used during model training.
+165: Candidate machine learning approaches considered for the system included Logistic Regression, Support Vector Machine, Gradient Boosting Classifier and Random Forest Classifier. These algorithms were selected to provide a comparison between an interpretable linear approach, a margin-based classifier and ensemble-learning approaches. Evaluation was carried out using measures appropriate to the final implemented prediction outcome. Where the outcome was represented categorically, suitable classification metrics included accuracy, precision, recall and F1-score; where the outcome was retained as a numerical grade, suitable regression measures included Mean Absolute Error, Root Mean Squared Error and the coefficient of determination.
+166: The web-based prototype was designed to integrate the trained prediction pipeline into an operational decision-support interface. The frontend component enabled users to submit relevant student information, while the backend processed submitted values using the same transformations applied during model development and returned the prediction output. The system was intended to support academic review and student assistance rather than to serve as an autonomous basis for consequential academic decisions.
+167: Table 1.1: Mapping of Project Objectives to Methodology
+168: S/N
+169: Objective
+170: Methodology Adopted
+171: 1
+172: To obtain and prepare real secondary educational performance data containing academic, demographic, social and school-related attributes for predictive analysis.
+173: The Student Performance dataset was obtained from the UCI Machine Learning Repository. The Mathematics and Portuguese language files were combined to produce 1,044 student-subject performance records.
+174: 2
+175: To examine the attributes represented in the Student Performance dataset and prepare them appropriately for machine learning model development.
+176: The available demographic, family, social, school-related and academic attributes were inspected. Categorical variables were transformed into numerical representations, and numerical predictors were standardised where required using a training-fitted scaling procedure.
+177: 3
+178: To develop and compare candidate machine learning models for predicting student academic performance outcomes.
+179: Logistic Regression, Support Vector Machine, Gradient Boosting Classifier and Random Forest Classifier were considered as candidate predictive models.
+180: 4
+181: To evaluate the developed models using performance measures appropriate to the final prediction outcome implemented in the system.
+182: The data were divided into training and testing subsets using an 80:20 holdout strategy. Evaluation measures were selected according to whether the final outcome was represented as a numerical grade or a categorical performance output.
+183: 5
+184: To develop a web-based prototype that enables users to submit relevant student attributes and obtain an academic performance prediction output.
+185: A client-server web application was developed to receive student input values, apply the stored preprocessing and prediction pipeline, and display the model output.
+186: 6
+187: To discuss the ethical, privacy and contextual limitations associated with applying machine learning to student-performance prediction.
+188: Ethical issues relating to privacy, sensitive student attributes, fairness, human oversight and the use of Portuguese secondary-school data for wider deployment were examined.
+189: Significance of the Study
+190: This study is significant because it demonstrates the application of machine learning techniques to real educational data for the prediction of student academic performance. The developed prototype provides a foundation for exploring how predictive analytics may support educators and academic advisers in identifying patterns that require further review and possible intervention.
+191: The study contributes to the application of educational data mining by demonstrating how student-related academic, demographic, family, social and school-related variables may be prepared and analysed for academic performance prediction.
+192: The study provides a practical prototype through which machine learning predictions can be presented in a web-based system for academic decision-support purposes.
+193: The study highlights the importance of responsible interpretation of student predictions by positioning the output as supplementary information for educators rather than as a final judgement about student ability.
+194: The study provides a methodological basis for future development using locally representative educational data, particularly where the system is to be adapted for Nigerian tertiary institutions.
+195: The study draws attention to important ethical issues associated with educational prediction systems, including data privacy, sensitive variables, fairness and the need for human oversight.
+196: Scope of The Study
+197: The scope of this study defines the boundaries within which the EduPredict AI prediction system was developed and interpreted.
+198: Data Scope
+199: The study was limited to the Student Performance dataset obtained from the UCI Machine Learning Repository. The dataset consisted of two subject-specific files: Mathematics (student-mat.csv) with 395 records and Portuguese language (student-por.csv) with 649 records. The two files were combined to form a working dataset of 1,044 student-subject performance records.
+200: Population Scope
+201: The data represented students from two Portuguese secondary schools. Consequently, the developed model and prototype were based on secondary-school educational records within the Portuguese context. The study did not claim that the resulting system had already been validated for Nigerian university students or for other educational populations.
+202: Variable and Outcome Scope
+203: The study considered the demographic, family, social, school-related and academic variables contained in the UCI Student Performance dataset. The original outcome variable was G3, representing the final subject grade on a scale from 0 to 20. Where a categorical prediction output was adopted in the final implementation, such categories were required to be explicitly derived from documented grade thresholds.
+204: Algorithmic Scope
+205: The study considered four candidate machine learning approaches for predictive modelling: Logistic Regression, Support Vector Machine, Gradient Boosting Classifier and Random Forest Classifier. These models were selected to compare linear, margin-based and ensemble-learning approaches in student academic performance prediction.
+206: Evaluation Scope
+207: The dataset was divided into training and testing subsets using an 80:20 holdout strategy. Evaluation was limited to measures appropriate to the final model outcome. Classification measures were appropriate where the outcome was represented as performance categories, while regression measures were appropriate where the outcome was predicted as the numerical final grade G3.
+208: System Implementation Scope
+209: The study covered the development of a web-based prediction prototype for submitting student attributes and receiving model-generated academic performance outputs. The prototype was intended as a decision-support tool for academic review and supportive intervention planning.
+210: Ethical and Contextual Limitation
+211: The study did not establish that the developed prototype was ready for direct operational deployment in Nigerian tertiary institutions. Before such deployment, the model would require validation or retraining using locally representative educational data, alongside appropriate privacy, authentication, fairness and access-control safeguards.
+212: Project Outline
+213: This project is structured into five chapters. Chapter One introduces the study by presenting the background, statement of the problem, aim and objectives, methodology, significance, scope and organisation of the project. Chapter Two reviews relevant literature on student academic performance prediction, educational data mining, learning analytics, machine learning algorithms and related existing systems. Chapter Three presents the research methodology adopted for the development of EduPredict AI, including the research design, dataset representation, sampling procedure, data preprocessing, machine learning model development, evaluation methods, software tools, deployment architecture and ethical considerations. Chapter Four presents the implementation of the system, experimental results and discussion of findings. Chapter Five provides the summary, conclusion, recommendations, limitations and suggestions for future improvement.
+214: CHAPTER TWO
+215: LITERATURE REVIEW
+216: 2.1 Preamble
+217: The chapter elaborates on literature review towards the establishment of a student academic performance prediction system. It also includes conceptual background, machine learning approaches, theoretical background, current methodologies and empirical research that has been carried out to forecast or estimate students academic performance. This review is intended to create a solid background on how machine learning solutions can be used to help educational institutions in identifying at-risk students and enhancing their academic performance.
+218: 2.2 Conceptual Review
+219: This section explains the core areas that bear out student performance prediction systems They form the basis upon which the current study is formed
+220: 2.2.1 Student Academic Performance
+221: Student academic performance is the quantifiable results of learning activity of a student and it is a highly essential measure of learning efficiency and personal achievement., encompassing cognitive, behavioral, and emotional dimensions (Zhang et al., 2021). In predictive systems that are based on machine learning, academic performance goes beyond the conventional grade-based systems to encompass holistic assessment of cognitive, behavior and developmental performance. 
+222: Belachew and Gobena (2017). made use of such exhaustive measures as final GPA and grades in all courses as main measures of academic performance, whereas Waheed et al (2020)., and Asif et al. (2017). have underlined that the assessment of performance should also take into consideration the personality factors, interests, attributes, and opinions which have a significant impact on academic performance in particular. These traditional measures are based on the quantitative indices of grades, test scores, and course completion rates, and Kabakus & Kara (2022). have obtained prediction accuracy of 96.7% based on these indicators., highlighting the role of quantitative indices in model training (Ahmed, 2024). 
+223: It has been determined that the variables that affect academic performance are many, among them are the demographic factors, education levels of parents, behavioral factors such as time of study and attendance, and environmental factors. Waheed et al. (2020). also presented the importance of external variables like geographical location, parental education, and health condition in shaping academic performance. 
+224: In predictive modeling scenarios, academic performance is both the variable to forecast and the variable used to build the model, and Francis & Babu (2021); Yousafzai et al. (2021). show that machine learning models are capable of predicting the performance of students with an accuracy of 84%., with recent advancements in feature engineering pushing accuracies even higher (Albreiki et al., 2024). The performance is usually categorized in either pass/fail or excellent/good/average/poor categories which allow the assessment as well as the prediction. 
+225: The temporal nature of academic performance permits early warning mechanisms that can be used to identify the students at risk at a very young age and take necessary interventions through tutoring courses, academic coaching, and special needs services, which can go a long way in enhancing the future performance of the students and the educational institutions.
+226: Table 2.1: Summary of Machine Learning Algorithms Used in Student Performance Prediction
+227: Algorithm
+228:  Description
+229: Common Use in Student Prediction
+230: Decision Tree
+231: A tree-structured model that splits data into branches for prediction.
+232: Classifying students as pass/fail or at-risk.
+233: Random Forest
+234: Uses multiple decision trees to improve accuracy.
+235: Predicting final grades and dropout risk.
+236:  Naïve Bayes
+237: Probabilistic model based on Bayes’ theorem.
+238: Early-stage risk identification.
+239: Support Vector Machine (SVM).
+240: Finds optimal separating boundaries between classes.
+241: High-accuracy grade prediction.
+242: Neural Networks
+243: Models complex nonlinear patterns.
+244: Deep analysis of academic behaviour patterns.
+245: 2.2.2 Educational Data Mining
+246: Educational Data Mining is a sub-specialty that uses data mining methods on educational data to identify patterns, relationships, and insights that can be used in educational decision-making and to enhance learning outcomes. It is an interdisciplinary discipline that incorporates algorithms of machine learning, statistics and educational research to study massive datasets produced by education institutions and learning systems.
+247: As Alyahyan & Düştegör (2020). highlighted the tools of data mining and machine learning, it has become less problematic to examine the educational data in various angles and obtain diverse information that can lead students to their future success and assist them in discovering their areas of interest based on their abilities and potentials, fostering personalized pathways (Namoun & Alshanqiti, 2021).
+248: Educational data mining involves the methodical examination of academic histories, demographic data, behavioral trends, and learning interactions of students to determine what influences academic achievement and predetermines the performance results in the future. Belachew and Gobena (2017). applied educational data mining practically by using student transcript data of Wolkite University that covers several years and found models and patterns that would be useful in educational decision-making.
+249: The subject matter has changed to integrate various data levels other than the traditional academic records, as shown by Waheed et al (2020)., and Asif et al. (2017)., educational data mining can incorporate personality factors, interests, attributes, and opinions in addition to demographic and academic data to offer a holistic view on the learning patterns of students.
+250: The principal methodological basis of educational data mining is machine learning techniques, and Hasan et al (2021); Alomari et al. (2023). show how educational establishments can apply such techniques to scan and notify the students about risky behavior, further counseling or training them on the basis of the collected data.
+251: Educational data mining has also been used in other functions of an institution such as predicting student performance, early warning systems, optimization of resource allocation, and individual learning suggestions. Francis & Babu (2021); Yousafzai et al. (2021). noted that educational data mining allows institutions to establish the performance of students on a high level of accuracy, which allows early detection of the students who might perform poorly as well as implement proactive intervention measures.
+252: Its increasing accessibility of educational data and technology has enabled more effective execution of educational data mining to be more accessible, with the article by Kabakus & Kara (2022). with the use of extensive datasets consisting of thousands of student records illustrating how data mining methods can attain an impressive level of prediction accuracy of up to 96.7%.
+253: Educational data mining also includes the correlation analysis of many variables on the performance of students and studies have identified the relationship between academic performance and such variables as study time, parental education, socioeconomic factors, and behavioral pattern.
+254: Its development remains dynamic with further incorporation of sophisticated analytical procedures and the fact that educational data mining has the capabilities of offering insightful information to enhance teaching strategies, curriculum development, student care, and all organizational efficiency to enhance student achievements and quality education. A widely cited review of more than 120 studies confirms that feature selection and ensemble methods remain the most dominant approaches in educational data mining (Shahiri et al., 2023).
+255: 2.2.3 Learning Analytic
+256: Learning Analytics is the systemized checking of data concerning learners and their surroundings to gain knowledge and maximize the learning processes and educational settings as they arise. The domain exploits the more sophisticated computational methods and machine learning procedures to convert raw educational information into a form of actionable information that can improve student learning, teaching, and institutional decision-making efforts. Hellas et al. (2018)., and highlighted that learning analytics can be used to develop machine learning tools that may forecast future academic performance and contribute to high performance of a student at all levels of his/her educational progress as teachers and faculty members will have the capability to systematically track and analyze the progress of a student, as evidenced in blended learning contexts (Wang & Yu, 2025).
+257: Learning analytics is a broad concept of analysis of learning behaviour, student engagement trends, student academic performance, and other contextual aspects that affect the outcomes of the learning process. Waheed et al (2020)., and Asif et al. (2017). revealed that learning analytics could integrate various data types, such as academic history, demographic and behavioral data, and psychographic variables to create a complete profile of a student to create personalized learning strategies and specific interventions. Its techniques include advanced forms of analysis such as machine learning algorithms, statistical modeling, and predictive analytics to find patterns and relationships in educational data that might not be obvious using other traditional methods of assessment.
+258: Alyahyan & Düştegör (2020). highlighted the ability of learning analytics to give insights about the preferred teaching strategies, learning potential, and academic performance trends in students, allowing the educator to alter their teaching models according to the needs of specific students and maximise learning experiences.
+259: Early warning systems and learning analytics are equally important to identify students who are prone to failing academically before the problem is too big to handle, as Belachew and Gobena (2017). prove that analytical methods can accurately predict the performance outcome of students and therefore allow providing timely interventions and support services.
+260: Beyond curriculum design, resource allocation, student support service, and institutional planning, the empirical applications of learning analytics have extended to other education-related domains such as the placement prediction system, which Kabakus & Kara (2022). suggest to use the analytical insights to guide students and institutions to make sound career choices and academic specialization. Learning analytics also include real time monitoring and feedback systems, which furnish real time information on the advancement of student learning, and thus, can facilitate dynamic learning environments, which dynamically react to individual student needs and learning trends.
+261: Francis & Babu (2021); Yousafzai et al. (2021). emphasized that learning analytics can yield high prediction accuracy in predicting student outcomes to allow educational institutions to adopt data-driven approaches to improving the percentage of students that succeed and overall education effectiveness.
+262: By linking learning analytics to institutional systems and processes, it will be possible to provide the holistic management of students, starting with admission and enrollment, continuing with graduation and professional placement, and offering sustained insights on student performance and institutional growth. Hasan et al (2021); Alomari et al. (2023). have shown that superior analytical algorithms such as ensemble algorithms can deliver superior results in learning analytics usage and allow generating more accurate and dependable results about student learning behavior and performance forecasting.
+263: As a revolutionary method of education, learning analytics will place the institutions in a focus of action rather than reaction and promote the use of evidence-driven decision-making processes that will support the students, educators, and institutions by enhancing the outcomes of the learning process, improving the teaching process, and helping the institutions to optimize the use of the available resources.
+264: 2.2.4 Academic Performance Indicators
+265: Academic Performance Indicators are quantified variables used to evaluate, track, and forecast student academic achievement in machine-learning-based prediction systems. These indicators supply the core data that allow algorithms to detect patterns, make predictions, and provide insights for educational stakeholders. Conventional indicators include grades, test scores, GPA, and course completion rates, Belachew and Gobena (2017). using final GPA and course grades in their prediction model at Wolkite University. Modern approaches extend beyond these traditional metrics to incorporate broader variables that influence performance.
+266: Kabakus & Kara (2022). showed that placement performance, combined with detailed academic history, can yield prediction accuracy up to 96.7%. Contemporary indicator frameworks also integrate demographic factors such as age, gender, family background, parental education, and socioeconomic status, with Waheed et al (2020)., and Asif et al. (2017). using 33 such variables to achieve 93.8% accuracy further enhanced by multi-model fusion approaches that incorporate demographic data for improved prediction (Zou et al., 2025). Behavioral indicators like study time, attendance, extracurricular involvement, and engagement levels have also become essential, as balanced study–social patterns correlate with higher achievement.
+267: External factors; including geographical location, parental education, health, and internet access must also be considered because they significantly influence academic success Waheed et al. (2020). . Psychographic variables such as interests, attitudes, opinions, personality traits, and learning preferences can further enhance predictive accuracy, as shown by Waheed et al. (2020). with their Interest, Attitude, and Opinion (IAO). variables. Time-based indicators, including improvement trends, consistency indices, and longitudinal performance patterns, help reveal student learning trajectories and future outcomes, which Alyahyan & Düştegör (2020). found useful for understanding learning styles, potential, and career alignment.
+268: Social and environmental factors; family relationships, peer interactions, lifestyle habits, and after-school activities also play a significant role in forecasting achievement. Integrating multiple categories of indicators allows machine learning models to build complex student profiles that reflect the true breadth of factors influencing success, with Francis & Babu (2021); Yousafzai et al. (2021). achieving 84% accuracy using Support Vector Machines on diverse indicator sets. Institutional and contextual variables such as school quality, teacher effectiveness, resource availability, and learning environment are equally relevant. Hasan et al (2021); Alomari et al. (2023). demonstrated that ensemble methods combining varied indicators can reach 90.57% accuracy, highlighting the value of extensive indicator systems. Effective prediction therefore depends heavily on appropriate feature selection and correlation analysis to identify the most relevant academic performance indicators for a given educational context. Admission requirements and pre-university grades have also been shown to be strong early predictors when combined with socio-demographic variables (Adekitan & Noma-Osaghae, 2023).
+269: Table 2.2: Data Features Commonly Used in Student Performance Prediction
+270:   Feature Category
+271: Examples
+272: Purpose
+273: Academic Features
+274: GPA, test scores, course grades
+275: Predict academic success or failure
+276: Demographic Data
+277: Age, gender, background
+278: Identify patterns among student groups
+279: Behavioural Data
+280: Attendance, class participation
+281: Early detection of performance decline
+282: Psychosocial Factors
+283: Motivation, study habits
+284: Understanding performance influencers
+285: Institutional Data
+286: Course difficulty, teacher quality
+287: Identifying systemic academic issues
+288: 2.2.5 Early Warning Systems
+289: Early Warning Systems in education are preventive intervention measures which involve the application of predictive models in machine-learning in order to identify students who are at risk of underperforming before issues may escalate. Such systems will change educational support to proactive since they would deal with at-risk students at the beginning of their academic life. Belachew and Gobena (2017). indicate that when the prediction accuracy is high, the institutions can detect the bad performing students at the early stages of learning and take the necessary action before it is too late.
+290: The principle of early warning systems is that they are based on continuous comparisons of indicators like academic outcomes, attendance, activity rates, and behavioral indexes, which are processed via machine learning algorithms to offer risk evaluation. Francis & Babu (2021); Yousafzai et al. (2021). demonstrated that machine learning-based methods can obtain a high-level of accuracy in recognizing students that will struggle and provide corresponding counseling and support services , with ensembles reaching 94% accuracy (Rebelo Marcolino et al., 2025).Ensemble models with an accuracy of more than 90.57% give plausible alerts of the high-risk pupils, which sends automatic alerts to advisory and support departments Hasan et al (2021); Alomari et al. (2023).
+291: These systems include various risk factors that are not academic in nature and as shown by Waheed et al (2020)., and Asif et al. (2017). demographic, behavioral and psychographic variables can give notable risk profiles. Predicted levels of risk can then be used to implement intervention measures that range between automated reminders and intensive tutoring, counseling and academic coaching based on the institution. Kabakus & Kara (2022). have also demonstrated how early warning systems can work together with placement services to drive students to the right academic and career goals.
+292: The early warning systems should be timely with the intervention initiated during the first semester or early academic period being better than the interventions initiated later. According to Alyahyan & Düştegör (2020)., these systems also show the learning styles and the patterns of performance, which makes it possible to design individual intervention plans. To coordinate interventions across departments, practical implementation needs to tie up with institutional student information systems. According to Hellas et al. (2018)., and , early warning systems assist teachers in paying attention to students with downward trends, which stop failure in academic achievements and boost the overall performance.
+293: Another benefit of these systems is that institutional intelligence may be provided to uncover systemic problems, gaps in resources, and program flaws and make curriculum, services, and learning environments better. In addition to helping individuals, early warning systems enhance the outcomes of institutions (retention, graduation rates, resource distribution, and the quality of education). Higher models even have the real-time monitoring, which allows assessing the risk of the student and providing dynamic intervention in the learning process.
+294: Figure 2.1 Broad categorisation of a student prediction performance system
+295: Figure 2.2 below presents a conceptual framework of the student performance prediction system that is used to visually represent the variables, the sources of data, machine learning operations, and the prediction outcomes addressed in this chapter. This model shows the process of collecting, processing, and analyzing student data to obtain actionable information to be used in academic intervention and institutional decision-making.
+296: Figure 2.2 Conceptual Framework of Student Performance Prediction
+297: 2.3 Review of Student Performance Prediction System for University Services
+298: The student performance prediction system has emerged as a very critical tool in any contemporary university because it has changed the way institutions can deliver their support, resource distribution and the success rates of the students. These systems intersect data analytics and university operations, and allow them to offer proactive and personalized services to students. Hellas et al. (2018)., and  observed that the prediction systems change the response mode of faculty to the proactive one, assisting the faculty in tracking student progress and marking the beginning of academic decline early on.
+299: These systems are also used in university registrar and placement offices. Kabakus & Kara (2022). demonstrated that using the training and placement data, one can predict the performance of the placement and aid the institution in training students to pursue careers and enhancing the placement performance. Academic advising is also changed, and Belachew and Gobena (2017). show that transcript data can be used to find out students who require early assistance.
+300: There is an inclusion of various variables in prediction systems other than the conventional academic indicators. Waheed et al (2020)., and Asif et al. (2017). emphasized that the academic and personal growth can be supported with references to personality factors, interests, attributes, and opinions. It can be linked to the university information systems like WEKA Kabakus & Kara (2022). so that it produces data without the need of a high level of technical skills.
+301: The allocation of resources is also optimized by these systems. Hasan et al (2021); Alomari et al. (2023). demonstrated that ensemble techniques with the accuracy of 90.57% are useful in assisting universities to identify the students requiring further tutoring, support mechanisms, and interventions. Prediction systems help in the placement and career services to guide students towards appropriate academic areas and also allow counselors to deliver more focused guidance Waheed et al (2020).
+302: Prediction systems are used by the quality assurance and institutional effectiveness units to track the general performance. Francis & Babu (2021); Yousafzai et al. (2021). proved the value of machine learning in assessing the performance of institutions and the accreditation and constant improvement. Such systems have taken over the entire cycle of managing students, Waheed et al. (2020). demonstrated how external factors, including geography, parental education, and health can be added to provide more comprehensive student support reliant on health, international, and financial aid services.
+303: Embedded early warning systems facilitate crucial support in the operations of the university, indicating that precise predictions are essential to enable the retention services to identify the at-risk students at an early stage to receive tutoring, coaching, and mental health assistance (Belachew and Gobena, 2017). Their efficiency is based on strong assessment measures like accuracy, precision, and recall Kabakus & Kara (2022)., which have provided the institutions with confidence in decision-making.
+304: Through systemic integration of prediction systems within the services enables universities to predict better the pattern of success, identify system problems, and create evidence based policies that will increase academic support, resource management, and student achievement in all categories of departments
+305: 2.4 Review of Relevant Machine Learning Concepts
+306: The creation of the student performance prediction system based on machine learning implies a number of basic notions, which are the theoretical and practical basis of this study. Knowledge in these concepts is important in understanding the architecture functions and strategies of implementation of the system.
+307: 2.4.1 Machine Learning (ML)
+308: Machine Learning is a sub-discipline of artificial intelligence that is concerned with creating algorithms and systems that can learn to forecast and discern patterns based on the data supplied to them without being directly coded to accomplish any particular task. According to Waheed et al (2020)., and Asif et al. (2017)., integrating supervised techniques for robust outcomes (Sanfo, 2025). the process of machine learning is oriented to the understanding of the complexity of different kinds of the collected data and the selection of the right model on the basis of the data by attempting a variety of models, which is fundamentally different to the simple computing algorithms to solve the problem.
+309: Machine learning algorithms in the context of education are developed to assess the inputs of data, develop training sets, and generate the necessary outputs with the help of statistical methods of estimation that allow calculating the systems on the educational data patterns and make accurate predictions regarding the final outcomes of students. Belachew and Gobena (2017). underlined that teaching and learning data is analyzed by machine learning methods to reveal the models or patterns, and it is especially useful in the case of educational facilities that need to increase the level of student success and optimize the allocation of resources.
+310: Machine learning has been applied to student performance prediction, and these algorithms rely on supervised learning techniques including Support Vector Machine, Neural Networks, Decision Trees, Logistic Regression, and K-Nearest Neighbor algorithms, with Francis & Babu (2021); Yousafzai et al. (2021). proving that all of these algorithms can be effectively used to predict student academic results with high levels of accuracy. The state of the machine learning applications involve ensemble techniques, which involve using more than one different algorithm and can be used to obtain better accuracy rates of 90.57% in predicting student performance using ensemble techniques of Support Vector machine, Decision Tree and K-Nearest Neighbor algorithms Hasan et al (2021); Alomari et al. (2023).
+311: The educational application of machine learning systems takes in various types of data, such as academic records, demographic information, behavioral patterns and psychographic variables with Kabakus & Kara (2022). recording exceptional prediction rates of 96.7% when multilayer perceptron neural networks worked on comprehensive student datasets.
+312: Machine learning works the other way: training algorithms are trained using historic data of students to determine patterns and relations that can be useful later to predict outcomes, and Alyahyan & Düştegör (2020). indicate how both prediction supervised learning methods and unsupervised learning algorithms such as K-means clustering can be combined to offer detailed information to student performance trends and groupings. Machine learning allows learning institutions to change their model of reactive problem-solving to the proactive intervention model by releasing the identification of at-risk students in the early stages to provide timely support that can greatly enhance academic performance.
+313: The industry of machine learning applications in education has also developed to allow real-time processing of data and the ability to update the model continuously, allowing dynamically changing prediction networks to respond to the changing environments of the student and keep them informed of progress as they go through the learning process. Waheed et al. (2020). depicted the idea of how machine learning is capable of merging multidimensional data of complex nature such as interests, attitudes, opinions, demographics, and behavioral patterns to deliver a high rate of prediction along with a detailed insight into the factors that impact student success.
+314: The applied application of the machine learning in the education world employs the already understood platforms like the WEKA ( Waikato Environment for Knowledge Analysis ). which offer the whole package of machine learning algorithm and assessment tool which offers educational institutions to establish advanced prediction systems without the need to have the broad technical knowledge. The ability of machine learning to process large scale educational data and the presence of hidden patterns that might not be easily visible using alternative analytical tools enables such program to be especially useful to current educational organizations that are interested in maximizing student success rates and institutional performance.
+315: The ever-growing development of machine learning methods, such as deep learning models and more advanced ensemble ones, ensures an even greater level of prediction accuracy and the creation of more advanced educational analytics systems that are capable of delivering more precise and practical information to the stakeholders in the education sector.
+316: 2.4.2 Supervised Learning
+317: Supervised Learning is a machine learning paradigm, based on the principle of using labeled training data, to construct predictive models that are able to make accurate predictions of new data, through the learning of input-output relationships, induced in the course of training. Supervised learning algorithms in student performance projections are trained using historical student data with both the input features and the desired outcome known, so that a model can be developed that can correctly predict future student outcome with great accuracy. Belachew and Gobena (2017). showed what neural networks, Naive Bayesian, and Support Vector Machine can do to supervised learning, whereas Kabakus & Kara (2022). managed to reach prediction rates of 96.7% with the help of various supervised learning methods such as multilayer perceptron and logistic classifiers.
+318: Classification
+319: Classification is a supervised type of learning which predicts categorical results by categorizing input data into previously known classes or categories. Classification algorithms in educational environments forecast results of pass/fail or excellent/good/average/poor levels or placed/not placed in educational settings. Francis & Babu (2021); Yousafzai et al. (2021). illustrated classification with the Support Vector Machine to attain 84% accuracy in predicting the categories of student performance, whereas Hasan et al (2021); Alomari et al. (2023). applied multiple classification algorithms such as Decision Trees, Random Forest, and K-Nearest Neighbor to predict student grade categories and obtained an accuracy of 90.57% of the accuracy, outperforming single classifiers (Tomasevic et al., 2021). with the ensemble classification methods.
+320: Regression
+321: Regression is a supervised learning model that forecasts continuous numerical values by modeling mathematical connections amid input variables and target values. Regression algorithms in student performance prediction are used to predict individual numerical scores, GPA, or probability score to succeed in the academic performance. Linear Regression and KNN were used by Alyahyan & Düştegör (2020). to predict continuous student performance measurements and regression methods allow the institution to predict individual grades, test results, or percentages of student performance instead of discrete categories, which gives a finer view into anticipated academic outcomes of students and allows setting the threshold of intervention more accurately.
+322: Figure 2.3 General Machine learning Workflow
+323: 2.4.3 Common ML Algorithms for Prediction
+324: The following algorithms or models are commonly used in student performance prediction system;
+325: Support Vector Machine (SVM).
+326: SVM identifies the best hyperplanes to classify various categories of data through maximizing the separation between data. in student performance prediction, SVM is able to establish boundaries of decision making between high performing and low performing students. Francis & Babu (2021); Yousafzai et al. (2021)., obtained 84% accuracy with SVM whereas Hasan et al (2021); Alomari et al. (2023). obtained 90% accuracy on an individual basis with SVM in predicting student outcomes, with ensembles enhancing robustness (Aggarwal et al., 2021).
+327: Neural Networks (Multilayer Perceptron).
+328: Neural networks are constructs that employ interrelated layers of artificial neurons to acquire intricate patterns in data by means of forward propagation and backpropagation steps. Kabakus & Kara (2022). realized a high accuracy of 96.7% in predicting student placement to multilayer perceptron networks, which proves the validity of the algorithm in nonlinear relationships between the student characteristics and the academic outcomes.
+329: Decision Trees
+330: Decision trees develop hierarchical decision models which divide data depending on the value of attributes using metrics such as Information Gain and Gini Index. These algorithms have simple rules that can be easily interpreted by the educators. Hasan et al (2021); Alomari et al. (2023). applied Decision Trees when creating their ensemble model, which is why it also contributed to the overall prediction accuracy of 90.57% provided by the model along with the ability to explain their predictions clearly.
+331: K-Nearest Neighbor (KNN).
+332: KNN classifies students according to their similarity with their k nearest neighbors in the dataset, where the similar cases are determined by the distance measures. Alyahyan & Düştegör (2020). used KNN to predict student performance, whereas Hasan et al (2021); Alomari et al. (2023). integrated KNN into their most effective ensemble model, which supports the idea that it is effective at localizing dependencies on student data.
+333: Logistic Regression
+334: Logistic Regression is a statistical tool that is used to forecast binary or categorical outcomes based on the likelihood of being in a particular class. Kabakus & Kara (2022).  applied several variants of logistic regression such as simple logistic and logistic model trees with 96.7% accuracy in the task of predicting the performance of students.
+335: Random Forest
+336: Random Forest is an ensemble algorithm that integrates decision trees in order to enhance higher predictive accuracy and less overfitting. The authors of Hasan et al (2021); Alomari et al. (2023).compared Random Forest with other algorithm types and have shown that it is an effective algorithm in dealing with various types of student data and making accurate predictions in educational settings.
+337: Naive Bayes
+338: Naive Bayes is a implementation of the Bayes theorem that uses independence assumptions to classify students on the basis of probabilistic relationships between features and outcomes. Naive Bayesian approaches were applied by Belachew and Gobena (2017)., who performed a detailed analysis at Wolkite University and demonstrated that it is effective in educational prediction tasks despite the simplifying assumptions about the independence of features.
+339: Table 2.3: Performance Comparison of Common Machine Learning Algorithms
+340: Algorithm
+341: Accuracy
+342: Precision
+343: Recall
+344: F1 Score
+345: Decision Tree
+346: 0.85
+347: 0.85
+348: 0.84
+349: 0.84
+350: Random Forest
+351: 0.94
+352: 0.94
+353: 0.93
+354: 0.93
+355: Naïve Bayes
+356: 0.82
+357: 0.81
+358: 0.80
+359: 0.80
+360: SVM
+361: 0.91
+362: 0.91
+363: 0.90
+364: 0.90
+365: Neural Network
+366: 0.967
+367: 0.97
+368: 0.96
+369: 0.96
+370: 2.4.4 Data Pre-processing Techniques
+371: The following Pre-processing Techniques are commonly used in student performance prediction system;
+372: Data Cleaning
+373: Data cleaning is the process of determining and processing missing values, deleting the duplication of the records, and fixing the inconsistent data entries. According to Waheed et al (2020)., and Asif et al. (2017)., their data was so clean that they did not need to go through data cleaning, which is why it is necessary when there are problems with data quality in student records, crucial for handling missing values in EDM (Zaffar et al., 2021).
+374: Label Encoding
+375: Label encoders convert the categorical variables into the numerical form like gender, type of schools, and the type of courses to ensure that they can be compatible with machine learning algorithms. In the study of Waheed et al. (2020)., the process of converting categorical variables into numerical values was performed using the tool of Label Encoder and allowed algorithms to handle non-numeric variables of the students.
+376: Transformation and normalization of data.
+377: Continuous variables are normalized or standardized which means that all the features equally contribute to the learning process and the variables with higher scales will not dominate the prediction model. This method will make sure that such features as age, GPA, and study hours will be positioned in similar scales to achieve better algorithm results.
+378: Feature Selection
+379: The feature selection methods are used to determine the most meaningful predictors of student performance through a correlation analysis and statistical analysis. Waheed et al. (2020). used the feature selection to extract the appropriate features out of their dataset of 33 variables, and correlation analysis to show that there were strong ties between performance of students and such factors as the education of their mother and the time they spent studying.
+380: 2.4.5 Model Evaluation Metrics
+381: To access accurate prediction, several evaluation metrics are used. The following are model evaluation used;
+382: Accuracy
+383: Accuracy is the proportion of correctly identified instances regarding all predictions by the model. Accuracies of up to 96.7% in MLP, 96% in other algorithms were obtained by Kabakus & Kara (2022). , and 90.57% with ensemble methods by Hasan et al (2021); Alomari et al. (2023)., proving the efficiency of various methods in predicting student performance , alongside F1-score for balanced evaluation (Sanfo, 2025).
+384: Precision
+385: Precision measures the percentage of accurate positive predictions of the model, meaning the percentage of the positive predictions that the model makes which are also accurate. This measurement plays an important role to determine the predictability of all those students who have a chance of succeeding in academics.
+386: Recall
+387: Recall can be used to determine the ratio of the number of actual positive predictions made by the model to the number of actual positive cases in the dataset and it indicates the level that the model can identify all students who will actually perform well. High recall is a factor that guarantees that the prediction system does not miss many of the high-performing students.
+388: F-measure
+389: F-measure is the harmonic average of precision and recall, which is a balanced measure of evaluation, and it takes into account false positives and false negatives. Kabakus & Kara (2022). have used the F-measure and other measures to examine the performance of the algorithm in student placement prediction in a comprehensive manner.
+390: ROC Area
+391: ROC (Receiver Operating Characteristic). Area is a measure of how the model can differentiate between dissimilar classes in varying threshold conditions. Kabakus & Kara (2022). incorporated the analysis of ROC areas into the framework of their comprehensive evaluation and obtained information on the model discrimination capacity.
+392: True Positive Rate (TPR).
+393: TPR or sensitivity is the ratio of the number of actual positive cases that are correctly determined by the model. High TPR in student performance prediction guarantees that majority of the students who are going to perform well are identified correctly and offered the relevant support and opportunities.
+394: 2.5 REVIEW OF RELATED METHODS
+395: This section examines the methodological approach used in existing performance prediction research
+396: 2.5.1 Feature engineering method.
+397: Student performance prediction engineering refers to the process of identifying and transforming variables on relevant feature engineering other than the traditional academic measures. Waheed et al. (2020). portrayed extensive feature engineering by introducing 33 varying attributes such as demographic data, family experience, behavioral pattern, and psychographic variables with a 93.8% precision. Waheed et al. (2020). pointed out the significance of extrinsic forces including the geographical location, parental education, and health condition. The feature selection is usually done through correlation analysis and statistical techniques, where studies have found strong relationships between student performance and such factors as mother education and study time, as per systematic reviews (Albreiki et al., 2021).
+398: 2.5.2 Classification-Based Techniques
+399: Classification algorithms forecast discrete student performance i.e pass/fail or performance level. Francis & Babu (2021); Yousafzai et al. (2021). had 84% accuracy with the use of Support Vector Machine to classify student performance. Decision Trees offer rules in their classification that can be easily understood by their educators and Logistic Regression provides a risk assessment with probabilistic values. The authors of Hasan et al (2021); Alomari et al. (2023). compared various classification algorithms such as Random Forest, Decision Tree, and K-Nearest Neighbor, all of which proved to be relevant in association with educational prediction.
+400: 2.5.3 Ensemble-based Learning Strategies.
+401: Ensemble techniques utilize several algorithms in order to attain a high level of prediction. Hasan et al (2021); Alomari et al. (2023). showed that the ensemble models (Support Vector Machine, Decision Tree, and K-Nearest Neighbor). were the most accurate with 90.57% and much more accurate in comparison with separate algorithms. The study by Waheed et al. (2020). took the Gradient Boosting algorithms and reached a 93.8% accuracy to demonstrate the effectiveness of the ensemble technique to apply the complementary advantages of various algorithm types to increase the quality of prediction. Recent hybrid ensemble models combining bagging and boosting have further improved accuracy to over 96 % in large datasets (Costa-Mendes et al., 2024).
+402: 2.5.4 Neural Network Techniques
+403: Neural networks especially Multilayer Perceptron (MLP). have demonstrated outstanding results in student prediction systems. Kabakus & Kara (2022). used MLP networks and nonlinear activation functions, which helps in achieving a high accuracy of 96.7%. The networks acquire intricate patterns using forward propagation and backpropagation algorithms thus, is efficient in modeling nonlinear associations between the student attributes and academic performances. Deep learning architectures, particularly convolutional and recurrent neural networks, have recently achieved accuracies exceeding 97% when trained on behavioural and VLE interaction data (Hussain & Khan, 2024). The effectiveness of neural networks in the task of predicting education is also shown by Belachew and Gobena (2017).
+404: 2.5.5 Comparison Performance Evaluation.
+405: In order to find the best methods it is imperative to conduct systematic comparison of algorithms in terms of standardized metrics. Kabakus & Kara (2022). compared several algorithms in terms of ten-fold cross-validation and various measures such as accuracy, precision, recall, F-measure, and ROC area. Results indicate that ensemble techniques usually perform better than individual algorithms and MLP has the best individual accuracy of (96.7%). then ensemble techniques (90.57%). and traditional algorithms such as SVM (84%). The analysis shows that depending on particular needs, the choice of algorithms is determined by certain criteria of accuracy, interpretability, and computational efficiency in the educational process.
+406: 2.6 Review of Existing Systems
+407: Numerous systems have been created to predict the academic performance in an automated way, starting with the classical manual methods to the sophisticated machine learning-based models. The systems are designed to overcome the shortcomings of traditional systems, by enhancing scalability, accuracy and timeliness in risk identification and intervention support of students.
+408: 2.6.1 Traditional Student Monitoring Systems 
+409: they are based on a high degree of manual evaluation by teachers, which poses a great challenge regarding scalability and accuracy. As mentioned in the article by Hellas et al. (2018)., the traditional approach to assessing the progress of students by hand is burdensome and ineffective in cases where significant groups of students are involved. These systems largely rely on periodic grade testing, attendance and subjective teacher observations. According to Hellas et al. (2018). and Asif et al. (2017)., many educational institutions still rely heavily on manual monitoring, which is often inconsistent and lacks systematic standards.
+410: 2.6.2 Automated Student Performance Prediction Systems 
+411: They are machine-based learning systems that use machine learning algorithms to predict student performance. Kabakus & Kara (2022). designed an extensive system with an accuracy of 96.7% with the multilayer perceptron network predicting student placement. Such systems handle various types of data such as academic records, demographic data and behavioral trends. Waheed et al. (2020). showed that there is an automated system with 33 attributes that use graduate boosting algorithms to predict well with 93.8% accuracy. Francis & Babu (2021); Yousafzai et al. (2021). demonstrated that automated systems are able to predict student performance with an accuracy up to 84%  and this allows institutions to make a data-driven choice on how to provide support and allocate resources to students.
+412: 2.6.3 University Early Warning System
+413: They are proactive programs designed to identify students that are on the verge of failure in academics before matters get out of control. According to Belachew and Gobena (2017)., the high accuracy of prediction allows detecting low-performing students early in the learning process. Such systems constantly track indicators of student performance and send automatic notifications to academic advisors. As Hasan et al (2021); Alomari et al. (2023). proved, ensemble-based early warning systems could be used to identify at-risk students with 90.57% accuracy and provide timely interventions by using tutoring programs and academic support services. The systems are built to work with the existing student information systems to bring real-time monitors and coordinating interventions.
+414: 2.6.4 AI-Based Academic Risk Detection Platforms 
+415: They exploit a sophisticated machine learning procedure and ensemble algorithms in identifying pattern of academic risk. Hasan et al (2021); Alomari et al. (2023). designed advanced platforms based on ensemble techniques, which integrate Support Vector Machine, Decision Tree, and K-Nearest neighbor algorithms to have a higher risk detection rate. These systems use the full scope of student profiling on top of the conventional academic indicators, and the research by Waheed et al. (2020). demonstrates that AI systems can use personality aspects, hobbies, and psychographic data to create a comprehensive approach to risk evaluation. Alyahyan & Düştegör (2020). revealed the AI platforms that may offer information about the desirable learning modalities and scholarly possibilities of students and allow individual intervention plans. These applications provide the real time analytics, predictive modelling and automated decision support to educational stakeholders, the most sophisticated method of academic risk management of students.
+416: 2.7 Summary of Literature Review
+417: According to the literature, it is known that the traditional manual student monitoring is being replaced with advanced machine learning-based prediction systems. It was found that the accuracy is high Kabakus & Kara (2022). achieved 96.7% with neural networks and Hasan et al (2021); Alomari et al. (2023). attained 90.57% with ensemble methods. It is always proven through research that ensemble methods are more efficient than single algorithms, and the application of various attributes in addition to academic grades leads to better predictions as it is proved by Waheed et al. (2020). with 93.8% accuracy of using 33 attributes. Support Vector Machine, Neural Networks, and Decision Trees prove to be the most promising ones, and the results of Francis & Babu (2021); Yousafzai et al. (2021). and Waheed et al. (2020). demonstrate the significance of demographic, behavioural, and Psychographic factors. All in all, machine learning has made it possible to shift to proactive educational support using early warning systems, making institutions more capable of identifying at-risk students and improving academic performance by making decisions based on data.
+418: CHAPTER THREE
+419: RESEARCH METHODOLOGY
+420: 3.1 Preamble
+421: The research methodology adopted for the development of the EduPredict AI Academic performance prediction system is presented in this chapter. It outlines research design, population represented by the data, dataset source and unit of analysis, sampling and partitioning procedure, data collection instrument, data preparation procedures, analytical approach, candidate machine learning models, and software environment, deployment architecture and ethical safeguards. 
+422: The chapter is organized so as to provide a clear and repeatable connection between the actual secondary education data utilized in the development of the model, and the web-based decision support system suggested in this study. 
+423: This study was conducted using an existing secondary dataset from UCI Machine Learning Repository that has already been collected from a selected set of people by the investigator, using a questionnaire. The methodology thus emphasizes the integrity of the data set, the right way to prepare the student attributes to be used in the prediction, separation of training and testing data, fair evaluation procedures and the responsible interpretation of any prediction result. 
+424: This orientation aligns with the findings of research on educational data mining and learning analytics, where the educational records are utilized to produce evidence that can guide interventions to support students (Romero & Ventura, 2020; Alyahyan & Düştegör, 2020).
+425: 3.2 Research Design
+426: The research method used in this study was quantitative, predictive and system development. The quantitative component was appropriate since the study involved analysing structured student records with both numerical and categorical attributes and aimed to build a predictive model which is an academic outcome. Predictive research involves modelling the relationship between observable variables and a target variable of interest for new observations, and in the context of education, how academic, demographic, family, social and school-related factors are related to the student's performance (Hellas et al., 2018; Alyahyan & Düştegör, 2020). 
+427: However, the study didn't end at model experimentation and the system development component was adopted. The trained predictive model was supposed to be accessible via a web interface called 'EduPredict AI' that was to be developed as a useful software prototype. 
+428: In this approach, the research process included the following steps: Data set collection, Data set inspection, Outcome definition, Preprocessing, Model training, Evaluation, Model selection, Serialization and integration with front-end and back-end application. 
+429: The deployed interface was designed as an academic support application, allowing users to populate student attributes with the aim of providing an output to be predicted which could then be used for further human review. 
+430: Design not experimental: student characteristics were not manipulated by researcher, nor were interventions assigned. Rather, preexisting secondary education data was used to build a predictive model of pre-existing attributes and academic outcomes. As such, outputs from the models suggest statistical patterns of prediction, not causal evidence of any specific variable impacting student performance.
+431: 3.2.1 Justification for Research Design
+432: The research design is justified on the basis of the following arguments. For the following reasons a predictive research design was appropriate for this research. First, the Student Performance dataset was specially made available for regression and classification studies of student achievement in secondary education, which provides an appropriate empirical foundation for the development of the model (Cortez, 2008; Cortez and Silva, 2008). 
+433: Secondly, the common approach of using student-performance prediction to identify students who might need support has been widely reported in the literature via historical student attributes and supervised machine learning methods (Hellas et al., 2018; Alyahyan & Düştegör, 2020). 
+434: Third, incorporation of a chosen model into an application allows the research result to be beyond analysis and become a prototype of an educational decision support system. 
+435: The design also allowed for a systematic comparison of various algorithms using the same analytical procedure. The same training data could be used to train a candidate model and the same testing data could be used to test the candidate models. In this way the fairness of algorithm comparison is enhanced, and it can be guaranteed that any differences between the algorithms are due to the modelling approach and not due to the evaluation sample.
+436: Figure 3.1: Overall Research Methodology Workflow for EduPredict AI
+437: 3.3 Population of the Study
+438: This study will include students in secondary school whose demographic, social, and family, school-related and academic characteristics were obtained from the Student Performance data set. The data was obtained from two secondary schools in Portugal, through the use of school reports and questionnaires (Cortez, 2008; Cortez & Silva, 2008). 
+439: Thus, the population of the study was not undergraduate students of a tertiary institution in Nigeria, but secondary school learners who appeared in the Portuguese educational context. The population was sufficiently representative for the development of an academic-performance prediction prototype because the data included a wide variety of traits which can be used in predictive modelling such as study time, previous failures, school support, parental background, absences and grades.
+440:  However, the dataset was also geographically, educationally and culturally constrained, with the implication that a model based off the data could not be automatically assumed to be accurate for the Nigerian university students and would require local validation, retraining or external testing with a more appropriate population.
+441: 3.3.1 Dataset as Population Representation
+442: The data set used for this study was UCI's Student Performance data set (Cortez, 2008). It includes data about the achievement of students in two subjects: Mathematics and Portuguese language. There are 395 records in the Mathematics file student-mat.csv and 649 records in the Portuguese language file student-por.csv. 
+443: A working data set of 1,044 student-subject performance records was obtained by merging the two files, from which the model was developed. The total is not considered to be 1,044 verified unique students, but rather student-subject performance records. 
+444: The UCI documentation states that students enrolled in both subjects may be listed in both source files and that attributes with unique values across both classes of students ("id across both") may be used to identify the students and to merge the two file sets (Cortez, 2008). 
+445: Keeping the subject specific records makes the unit of prediction a student's result in a specific subject context. There are 30 predictor attributes and three course-grade attributes in the original data set. 
+446: The original outcome variable is G3, and is scored on a 0 to 20 scale; G1 is the first period grade and G2 is the second period grade in the same subject. Because G1 and G2 are the earlier grades in the same course, using them can significantly influence prediction in the later grades of the course, G3; however, this is not an early entry warning model, as the model using the G1 and G2 variables is more of a mid-course, later-stage, performance estimator than an early entry warning model (Cortez, 2008; Cortez & Silva, 2008).
+447: Figure 3.2: Composition of the Student Performance Dataset Used in the Study
+448: 3.3.2 Unit of Analysis and Generalisability
+449: A record of a subject's performance was the unit of analysis for this study. Each record was the measurement of the characteristics and the recorded outcome of a student's performance in either Mathematics or Portuguese language. 
+450: This unit was suitable for application in the development of a model, as the target variable G3 was a measure of achievement within a subject and not a general measure of achievement. Caution needs to be exercised in the generalisation of the developed model. 
+451: The data were gathered in a specific educational environment and factors like parental occupation, school support, alcohol intake, time to school and grade structure may not be the same across a Nigerian tertiary institution. 
+452: Therefore, the resulting app is considered as a prototype of the potential of academic prediction by machine learning. If not used for operational purposes in the same context as recorded on the map, local data governance approval, validation through locally representative records and re-evaluating feature suitability is required.
+453: 3.4 Sample and Sampling Technique
+454: The entire merged working data set of 1044 student-subject performance records from the two source data sets were used for the study. No smaller sample was created because the study was secondary data and wanted to take advantage of all available real world information used in education to develop models. 
+455: The full data set retained all the subject records and did not discard observations during the first phase of model building. In the field of machine learning, sampling mainly takes the place of splitting records into a portion for model fitting and an independent portion for evaluating the machine learning model. 
+456: The methodology thus aimed to subset records into training and testing sets in a way that would leave the model with enough learning data but not overwhelm it with the records it hadn't encountered while training, while simultaneously leaving the observations it had seen during training for testing.
+457: 3.4.1 Composition and Combination of the Working Dataset
+458: The source files for both the Mathematics and Portuguese were the same, and combined they were suitable for a subject-level prediction experiment. The source cohorts were kept separately before the combination to report the contribution of the separate source cohorts separately to the combined data set. The Mathematics cohort's data amounted to 395 records, or 37.8% of the combined data, and the Portuguese language cohort's data amounted to 649 records, or 62.2% of the combined data.
+459: Table 3.1: Composition of the Working Dataset
+460: Dataset Component
+461: Source File
+462: Records
+463: Percentage (%)
+464: Description
+465: Mathematics cohort
+466: student-mat.csv
+467: 395
+468: 37.8
+469: Mathematics subject-performance records.
+470: Portuguese language cohort
+471: student-por.csv
+472: 649
+473: 62.2
+474: Portuguese language subject-performance records.
+475: Combined working dataset
+476: Both files
+477: 1,044
+478: 100.0
+479: Records available for model development and evaluation.
+480: 3.4.2 Data Partitioning
+481: A holdout validation strategy was used to ensure that records for learning are held back for evaluation. With the 80:20 partition used in the study, 835 records were put into the training subset and 209 records were put into the testing subset. 
+482: Pre-processing transformations and candidate prediction models were fit on the training subset, and the testing subset was used for the estimation of predictive performance for data that was not utilized in the fit of the model. The use of an independent testing subset was methodologically significant as it helps to assess the performance of a model on the same data it was trained with, which can be misleading. 
+483: A random state of 42 was kept constant throughout the partitioning process to allow the same partitioning to be reproduced at any point the experimental procedure was repeated. This would facilitate a clear comparison of candidate models and aid in preventing the performance differences of the models being attributable to a shifting split.
+484: 3.4.3 Sampling Method and Class Representation
+485: The suitability of stratification will be dependent on the final operational form of the outcome variable. The original UCI outcome is a numerical grade for the final outcome G3. 
+486: If the ultimate application includes splitting G3 into individual performance classes for use in a decision-support display, then the splitting of the classes should be stratified to ensure that each class is represented in the training and test sets. 
+487: This is particularly crucial for situations where one group is comprised of students at risk, as overall accuracy can be misleading and poor identification of students who require intervention (He & Garcia, 2009). 
+488: When the final model, instead, makes a continuous numerical prediction for G3, random holdout partitioning is suitable, provided that the distribution of the outcomes values is examined and reported. In both cases the outcome definition and the corresponding splitting procedure should be kept unchanged prior to model evaluation, to avoid a ‘post data-mining’ of the test data set.
+489: 3.5 Instrument for Data Collection
+490: This study used the secondary dataset 'Student Performance' from UCI Machine Learning Repository as its data collection tool. 
+491: Variables at the student level were gathered in the original data set using questionnaires and school reports in two secondary schools in Portugal, and include academic, demographic, family, social, and school-related data (Cortez, 2008; Cortez & Silva, 2008). It was an already structured data, so it was used as a research instrument that made it possible to obtain measurable student attributes and academic outcomes to analyze them in a predictive way. 
+492: The secondary data was suitable as the purpose of the study was to build and test an academic performance prediction system by applying machine learning, and not to collect new data from the field. It also meant that it was not necessary to directly solicit local students' names, identifiers or contact information, for the purpose of developing a prototype.
+493:  Secondary data also have their limitations, since the researcher has no control over the original data collection context, the definition of the variables nor over the context of the education in which the data were collected.
+494: 3.5.1 Description of Variables in the Dataset
+495: It has attributes that could be classified into demographic and school context, family background, learning support and aspiration, social and wellbeing, attendance and academic outcome variables. The operational meaning of the variables provided in the UCI original dataset is presented in Table 3.2.
+496: Table 3.2: Variables Available in the Student Performance Dataset
+497: S/N
+498: Variable
+499: Data Type
+500: Operational Description
+501: 1
+502: school
+503: Categorical
+504: School attended by the student: Gabriel Pereira (GP) or Mousinho da Silveira (MS).
+505: 2
+506: sex
+507: Categorical
+508: Sex recorded for the student: female or male.
+509: 3
+510: age
+511: Numerical
+512: Age of the student in years.
+513: 4
+514: address
+515: Categorical
+516: Home address type: urban or rural.
+517: 5
+518: famsize
+519: Categorical
+520: Family size: less than or equal to three, or greater than three.
+521: 6
+522: Pstatus
+523: Categorical
+524: Parental cohabitation status: together or apart.
+525: 7
+526: Medu
+527: Ordinal
+528: Mother's education level, coded from none to higher education.
+529: 8
+530: Fedu
+531: Ordinal
+532: Father's education level, coded from none to higher education.
+533: 9
+534: Mjob
+535: Categorical
+536: Mother's occupation category.
+537: 10
+538: Fjob
+539: Categorical
+540: Father's occupation category.
+541: 11
+542: reason
+543: Categorical
+544: Student's reason for choosing the school.
+545: 12
+546: guardian
+547: Categorical
+548: Student's primary guardian.
+549: 13
+550: traveltime
+551: Ordinal
+552: Home-to-school travel time category.
+553: 14
+554: studytime
+555: Ordinal
+556: Weekly study time category.
+557: 15
+558: failures
+559: Numerical
+560: Number of previous class failures.
+561: 16
+562: schoolsup
+563: Binary
+564: Whether the student receives extra educational support at school.
+565: 17
+566: famsup
+567: Binary
+568: Whether the student receives family educational support.
+569: 18
+570: paid
+571: Binary
+572: Whether extra paid classes are received within the course subject.
+573: 19
+574: activities
+575: Binary
+576: Participation in extracurricular activities.
+577: 20
+578: nursery
+579: Binary
+580: Whether the student attended nursery school.
+581: 21
+582: higher
+583: Binary
+584: Whether the student intends to pursue higher education.
+585: 22
+586: internet
+587: Binary
+588: Whether internet access is available at home.
+589: 23
+590: romantic
+591: Binary
+592: Whether the student reports being in a romantic relationship.
+593: 24
+594: famrel
+595: Ordinal
+596: Quality of family relationships.
+597: 25
+598: freetime
+599: Ordinal
+600: Free time after school.
+601: 26
+602: goout
+603: Ordinal
+604: Frequency of going out with friends.
+605: 27
+606: Dalc
+607: Ordinal
+608: Workday alcohol consumption.
+609: 28
+610: Walc
+611: Ordinal
+612: Weekend alcohol consumption.
+613: 29
+614: health
+615: Ordinal
+616: Current health status.
+617: 30
+618: absences
+619: Numerical
+620: Number of school absences.
+621: 31
+622: G1
+623: Numerical
+624: First-period subject grade, ranging from 0 to 20.
+625: 32
+626: G2
+627: Numerical
+628: Second-period subject grade, ranging from 0 to 20.
+629: 33
+630: G3
+631: Numerical outcome
+632: Final subject grade, ranging from 0 to 20; original output target.
+633: Source: Adapted from Cortez (2008) and Cortez and Silva (2008).
+634: 3.5.2 Outcome Variable and Operationalisation
+635: The source data indicated the original outcome variable was G3, representing the subject grade (0-20) that was received at the end of the third grading period. This variable allows two formulating predictions. 
+636: The model in a regression formulation is a model that estimates a numerical final grade. Documented grade thresholds can be used in a classification formulation to transform G3 into defined performance levels for alert and intervention decisions. 
+637: According to the UCI repository, the dataset has also been used in a study for modelling and classification for the regression task (Cortez, 2008; Cortez & Silva, 2008). In an operational definition for the output, the meaning of this output must be clear and carefully described in the final implementation record, particularly when the output is part of a decision support application (e.g., EduPredict AI). 
+638: If a performance category is shown, it should be accompanied by a specific G3 level, if applicable. This helps to ensure the interpretability of the system, helps with independent replication, and guards against performance labels being assigned without a clear educational foundation. Special notice too must be taken of the inclusion of G1 and G2.
+639: These prior grades are valid predictors for predicting final course grades as soon as they are available, but using these prior grades makes it a later-stage predictor. If the objective is an early warning system, a separate model that incorporates data from the early warning period but does not incorporate data from later grading periods could be more useful to make an assessment of risk before academic problems have become apparent.
+640: 3.6 Validity and Reliability of the Instrument
+641: For this study, the validity and reliability of the secondary data and the predictive modelling procedure were taken into account. The data did not involve a questionnaire that the researcher designed, so validity was not confirmed by a new pilot instrument and Cronbach's alpha coefficient. Rather, focus was placed on the appropriateness of the attributes at their disposal for the goal of prediction, and the trustworthiness of the original data source and the integrity of the analysis pipeline.
+642: 3.6.1 Dataset and Construct Validity
+643: This was supplemented by the process of using a documented educational dataset obtained from genuine school reports and questionnaires which has been made publicly available for analysis of student performance (Cortez, 2008; Cortez & Silva, 2008). 
+644: In addition to direct measures of academic achievement (G1, G2 and G3), there are contextual measures of study time, failure, support, absences and family-oriented factors. These types of attributes are consistent with the academic literature on prediction, which uses historical, behavioural and contextual data to analyse educational outcomes (e.g., Hellas et al., 2018; Alyahyan & Düştegör, 2020). 
+645: Construct validity is determined by interpretation of the target. G3 is a numerical prediction of the final grade for the subject in the source context. If categories are assigned to G3, the definitions of the categories are part of the construct being measured and must be justified and documented. 
+646: The model should therefore be described as predicting a recorded final-grade outcome or explicitly derived classification of performance, not general intelligence or ability, or long-term academic success.
+647: 3.6.2 Reliability, Reproducibility and Threats to Validity
+648: The modelling procedure was repeated using the same pipeline for data preparation, partitioning, model fitting and evaluation for all candidate models, which increases the reliability of the modelling procedure. No fitted transformations were applied to the training and testing subsets, and any scaling operations were fitted to the training data before being applied to the testing data. 
+649: This learn-predict separation prevents leakage of information from the withheld data to the modelling phase (Kaufman et al., 2011). Reproducibility was achieved by fixing the random state in partition the data and by saving the trained model that was selected and the preprocessing artefacts that were fitted for future prediction. 
+650: However, there were still some limitations to the validity. The data is from two secondary schools in Portugal, and so the findings are not generalizable to other national or tertiary-education settings. Students appearing in multiple subject records may have multiple records. G2 and G1 can also provide good predictions but can be less timely for intervention, as these grades are already predictors of current performance. 
+651: These limitations do not make the prototype invalid, but rather specify the circumstances for which its results are valid. When considering any implementation for institutional use, representative local records, a well-defined prediction time point and documented fairness and privacy protections should be evaluated.
+652: 3.6.3 Performance Evaluation Framework
+653: The assessment system should be aligned with the outcome formulation that is operationalized in the final model. Classification metrics are suitable when G3 is mapped onto a finite number of performance classes, regression metrics suitable when the system's output is a continuous numerical G3. Choosing the metrics after seeing model outcomes would detract from the method's transparency and so the output form and evaluation measure should be determined prior to final model comparisons.
+654: Table 3.3: Evaluation Metrics Appropriate to the Outcome Formulation
+655: Outcome Form
+656: Metric
+657: Meaning
+658: Relevance to the Study
+659: Categorical performance output
+660: Accuracy
+661: Proportion of testing records assigned to the correct performance category.
+662: Provides an overall correct-classification rate, but may obscure minority-class performance.
+663: Categorical performance output
+664: Precision
+665: Proportion of predicted members of a category that truly belong to that category.
+666: Relevant where incorrect risk flags could lead to unnecessary follow-up.
+667: Categorical performance output
+668: Recall
+669: Proportion of actual members of a category identified correctly.
+670: Important where failing to identify an at-risk student is consequential.
+671: Categorical performance output
+672: F1-Score
+673: Harmonic balance of precision and recall.
+674: Useful where class distributions are uneven (Sokolova & Lapalme, 2009; He & Garcia, 2009).
+675: Numerical G3 output
+676: Mean Absolute Error (MAE)
+677: Average absolute difference between predicted and actual grade.
+678: Communicates typical prediction error in grade units.
+679: Numerical G3 output
+680: Root Mean Squared Error (RMSE)
+681: Square-root of mean squared prediction error.
+682: Penalises larger grade-estimation errors more strongly.
+683: Numerical G3 output
+684: Coefficient of Determination (R²)
+685: Proportion of variance in G3 explained by model predictions.
+686: Indicates explanatory fit for continuous prediction.
+687: In the case of an implementation of classification, both macro-average and weighted-average should be taken into account if the categories are imbalanced. Weighted scores provide a summary of overall performance and take into account class support, while macro scores, which weight each category equally, provide some insight into underperforming performance on minority risk groups. If category based predictions are used, a confusion matrix should also be included in Chapter Four as it provides insights into what categories the model is confusing.
+688: 3.7 Method of Data Collection and Data Preprocessing
+689: In this study, secondary data were used from UCI Machine Learning Repository, rather than collecting new student data. The Student Performance dataset was chosen as this was gathered from real secondary school records and questionnaires and was designed for the analysis of educational achievement by data mining techniques (Cortez, 2008; Cortez & Silva, 2008).
+690: For the prototype, the use of an established public dataset allowed for prototype development without regard to students' personally identifiable information in the intended deployment environment. 
+691: The source dataset is a mixture of numerical, ordinal and categorical attributes, so data preprocessing was needed. Machine learning estimators need to have consistent representations of the input and a data pre-processing sequence is critical to prevent information leakage and to ensure that model evaluation is based on unseen records. The data processing method used in this research is described in the next subsections.
+692: 3.7.1 Dataset Acquisition, Combination and Preliminary Inspection
+693: The student will design and carry out surveys to gather, integrate, and analyze data for initial observation. The two data files (student-mat.csv and student-por.csv), both for the same subject, were downloaded from the UCI Machine Learning Repository and merged to form a working data set of 1,044 subject-performance records. 
+694: The consistency of the file structures was queried before preparation of the models with regard to attribute names, data types, and definition of outcomes. According to the official repository, no values are missing from the dataset, so the initial task was to verify the structure of the data that was imported and to identify any mixture of categorical, ordinal and numerical variables that needed to be transformed (Cortez, 2008). 
+695: The two subject files have the same attribute scheme but, respectively, they are related to different subject contexts. Any merging operation thus should keep a clear understanding that a record is a performance and not necessarily an individual. 
+696: If duplicate-person analysis is needed, the attributes in the UCI that are required for identification should be considered, and not personal characteristics beyond the requirements of the study should be reconstructed.
+697: 3.7.2 Encoding of Categorical and Ordinal Variables
+698: There are binary categorical, nominal categorical and ordinally coded variables in the source. Before fitting machine learning estimators, non-numeric values need to be numerically encoded in a manner that is compatible with machine learning algorithm and does not encode the inappropriate relationships between categories. 
+699: The scikit-learn library offers transformation utilities and supervised learning estimators that can be used to implement such pre-processing procedures (Pedregosa et al., 2011). Any binary variable like schoolsup, famsup, activities, internet and higher could be encoded numerically with a value of 0 or 1. For nominal variables (e.g. school, Mjob, Fjob, reason and guardian), a representation which does not imply a higher value of one category over another (such as one-hot) must be used. 
+700: When a variable's documentation is ordinal and the ordinal representation is consistent with the repository description, ordered variables like Medu, Fedu, studytime, famrel, freetime, Dalc, Walc, health can be kept in the repository as such. Each encoder or feature mapping to be used in the training needs to be saved and used again without change when new data are pushed into the application during deployment.
+701: 3.7.3 Feature Scaling and Prevention of Data Leakage
+702: In cases where scale sensitive candidate models were fitted, the numerical predictor variables were scaled using a scaling procedure that was fitted using the training data. The typical way to standardise involves centring the variable around the mean of the training set, and scaling it by the standard deviation of the training set. 
+703: This fitted transformation was only applied to the training subset and then applied to both the training and testing subsets; the testing subset was not allowed to feed into the transformation process. 
+704: The procedure is crucial because if it is performed using full data set, information from held-out evaluation records can affect the model preparation, resulting in an overly optimistic prediction of the performance of the model. This is called leakage and Kaufman et al (2011) stress the importance of separating learning of the model from subsequent prediction or evaluation. 
+705: The relevance of scaling is especially important in Logistic Regression and Support Vector Machine since their optimisation behaviour and decision surface can be influenced by the difference in scale of features. However, the same prepared data representation can be provided to the candidates which are based on trees so as to have a consistent comparative experiment.
+706: 3.7.4 Feature Retention, Prediction Timing and Interpretability
+707: The UCI data contains a wide range of candidate predictors, ranging from academic, social, family, school-related. Predicting should be used to inform a prediction purpose and feature retention should follow suit. G1 and G2 may be very useful for prediction of G3, but these are observed grades of the same subject, and may be less useful for very early intervention. Therefore, it is important that the final implementation clearly indicates whether it is for initial screening prior to posting of recorded grades or for support later in the year following recorded grades. 
+708: If the model explanation is obtained with coefficient magnitudes/feature-importance values, then results should only be seen as evidence of use of the predictor by the fitted model, and not as evidence of a causal influence. 
+709: Relationships in the training data might drive a variable to be included in a model prediction, but this doesn't mean that the variable's manipulation should result in a student's performance change. This is particularly relevant for sensitive or contextual characteristics like sex, family support, parental education, social variables etc.
+710: Table 3.4: Data Preparation Operations Applied in the Study
+711: Operation
+712: Data Affected
+713: Procedure
+714: Purpose
+715: Dataset acquisition
+716: student-mat.csv; student-por.csv
+717: Download/import from UCI repository
+718: Obtain documented real-world secondary education records.
+719: Dataset combination
+720: Two subject cohorts
+721: Row-wise combination of shared attribute structures
+722: Create the 1,044-record working dataset while retaining subject-record interpretation.
+723: Quality inspection
+724: All fields; G3
+725: Structure, missing-value and outcome review
+726: Confirm attribute consistency and the final-grade outcome definition.
+727: Categorical encoding
+728: Nominal and binary attributes
+729: Fitted numerical transformation
+730: Create machine-readable inputs without unsupported ordering.
+731: Ordinal representation
+732: Documented ordinal attributes
+733: Retain/order coded levels as applicable
+734: Preserve meaningful ordered scale where justified.
+735: Train-test partitioning
+736: Predictors and target
+737: 80:20 holdout split; random_state=42
+738: Reserve unseen records for evaluation and support reproducibility.
+739: Feature scaling
+740: Numerical variables where required
+741: Scaler fitted on training subset only
+742: Standardise scale-sensitive inputs and limit leakage.
+743: Artefact persistence
+744: Selected model and fitted preprocessors
+745: Serialisation for deployment
+746: Ensure new application inputs are transformed consistently.
+747: Figure 3.3: Data Preprocessing Workflow for EduPredict AI
+748: 3.8 Method of Data Analysis
+749: In the present study, supervised machine learning was used on the created educational dataset for data analysis. Because an academic outcome, G3, was identified in the source dataset, it was appropriate to use supervised learning. 
+750: The importance of predictive modelling of student performance in educational data mining is a broad line of research that can be used to provide additional academic review for students whose patterns of data have been recorded (Hellas et al., 2018; Alyahyan & Düştegör, 2020).
+751:  The analytical procedure involved fitting candidate models to the training subset, forecasting the testing subset with the models, assessing forecasts in a sensible method as a function of the selected outcome formulation, and picking a model for use in the application integration. Comparing multiple models was not just to see which model had the highest metric, but also to give thought to the interpretability of the model, the stability of the model, and the responsible use of the model to make predictions in an educational setting.
+752: 3.8.1 Machine Learning Algorithms and Rationale
+753: Fundamental classification algorithms were taken into account for EduPredict AI: Logistic Regression, Support Vector Machine, Gradient Boosting Classifier and Random Forest Classifier. They are complementary modelling assumptions, linear interpretable baseline, margin-based classifier and two ensemble approaches for capturing nonlinear relationships. Their inclusion allowed a comparative study of the performance of the models on the prepared education data.
+754: Table 3.5: Candidate Machine Learning Algorithms and Methodological Rationale
+755: Algorithm
+756: Analytical Role
+757: Operating Principle
+758: Reason for Inclusion
+759: Logistic Regression
+760: Interpretable linear baseline
+761: Estimates class probabilities from a weighted linear combination of features; suitable as a transparent reference model.
+762: Useful where the relative direction and weight of predictor contributions require interpretation.
+763: Support Vector Machine
+764: Margin-based classifier
+765: Constructs a separating boundary with maximum margin, potentially in a transformed feature space (Cortes & Vapnik, 1995).
+766: Suitable for scaled structured inputs and potentially complex boundaries.
+767: Gradient Boosting Classifier
+768: Sequential ensemble
+769: Builds an additive model by fitting weak learners sequentially to reduce prediction error (Friedman, 2001).
+770: Suitable for capturing nonlinear effects and interactions.
+771: Random Forest Classifier
+772: Bagging ensemble
+773: Aggregates predictions from multiple decision trees trained with randomness in cases/features (Breiman, 2001).
+774: Provides a robust nonlinear comparison model and feature-importance capability.
+775: 3.8.2 Model Training, Evaluation and Selection Process
+776: Following the pre-processing, only the training subset was used to fit the candidate models. For each candidate, predictions were made for a same unseen subset of tests, to allow comparison of their performance on the same unseen tests. 
+777: Repeatedly changing the method based on performance on the final testing subset would make the evaluation not independent and should not be the criteria for selecting a model. The type of output in the final application determined the model selection. 
+778: Comparative assessment should include accuracy, precision, recall, F1-score and a confusion matrix for category based output; particularly focusing on any at-risk category. For numerical prediction (G3) the error based measures such as MAE and RMSE should be reported along with R² for comparison. 
+779: The final model and the deployed preprocessing artefacts were saved and used in the processing of newly submitted data in order to avoid changing the processing of the training data.
+780: Figure 3.4: Machine Learning Training, Evaluation and Model Selection Process
+781: 3.8.3 Software and Development Tools
+782: EduPredict AI development took technologies supporting both data management and machine learning experimentation, as well as those for storing models, communicating with the back end, and interacting with the front end, with the ability to persist predictions alongside the data. 
+783: Python was used as the main programming language and Scikit-learn provided machine learning estimators and pre-processing tools for the analytical workflow (Pedregosa et al., 2011). The system technologies and their applications are presented in Table 3.6.
+784: Table 3.6: Software Technologies Used in EduPredict AI
+785: Technology / Tool
+786: Application in the Study
+787: Python
+788: Implementation of the data preparation, model training and backend service logic.
+789: Pandas and NumPy
+790: Importation, structuring and numerical processing of educational records.
+791: Scikit-learn
+792: Encoding/scaling utilities, candidate machine learning estimators and evaluation support.
+793: Joblib
+794: Storage and loading of the selected model and fitted preprocessing artefacts.
+795: FastAPI and Uvicorn
+796: Implementation and serving of backend application programming interface services.
+797: Vue.js 3 and Vite
+798: Development and bundling of the client-side web interface.
+799: Tailwind CSS v4
+800: Presentation styling and responsive layout for the user interface.
+801: Axios
+802: HTTP communication between the frontend and backend prediction service.
+803: SQLite
+804: Local persistence of prediction records generated through system interaction.
+805: 3.8.4 System Development Architecture and Prediction Workflow
+806: AI prototype for EduPredict was implemented using a client-server design approach. The frontend interface was built with Vue.js 3, Vite and Tailwind CSS v4 and the backend prediction service was built with FastAPI, served by Uvicorn. 
+807: The backend was tasked with receiving the submitted student records, validating the record structure, apply the stored pre-processing transformations, load the selected machine learning model, and return the prediction output as well as store the necessary prediction records in the SQLite store. 
+808: It's crucial that the trained pipeline matches the application interface. The final form fields exposed by the frontend need to be exactly the same as the predictor variables that were retained during the model training and have the same category definitions, and they must be transformed by the same fitted preprocessing as the predictor variables. 
+809: If the final UCI-based model differs from one or more of the preceding prototype interfaces, the interface and the request schema need to be updated prior to reporting the system as "operational.
+810: Table 3.7: End-to-End Prediction Workflow of EduPredict AI
+811: Stage
+812: System Activity
+813: 1. Input capture
+814: An academic user enters the permitted student attributes required by the final trained pipeline.
+815: 2. Request validation
+816: The frontend submits the record to the backend, where required fields and permissible ranges/categories are checked.
+817: 3. Preprocessing
+818: Stored encoders and scaling artefacts transform the input into the same representation used during training.
+819: 4. Prediction
+820: The deployed model generates a numerical grade estimate or a documented performance-category output.
+821: 5. Result display
+822: The prediction is returned to the frontend for interpretation as academic decision-support information.
+823: 6. Record persistence
+824: Where enabled, the submitted record and returned output are stored in SQLite subject to access safeguards.
+825: Figure 3.5: Deployment Architecture of the EduPredict AI System
+826: 3.9 Ethical Considerations
+827: Ethical considerations were integral to the development of EduPredict AI because the system analyses student-related information and may influence academic support decisions. Learning analytics and educational prediction create responsibilities relating to privacy, transparency, student agency, profiling and the consequences of interpreting predictions about individuals (Slade & Prinsloo, 2013). In addition, predictive models can reproduce inequities contained in source data or generated through variable selection and decision-making practices (Baker & Hawn, 2022).
+828: Accordingly, the system was positioned as a decision-support prototype rather than an autonomous decision-maker. A prediction may indicate that a student should be reviewed for supportive intervention, but it should not be used independently to impose academic penalties, deny opportunities or make irreversible decisions about a learner.
+829: 3.9.1 Data Privacy and Confidentiality
+830: The public Student Performance dataset does not contain direct identifiers such as student names, matriculation numbers or email addresses. Nevertheless, it contains personal and contextual attributes including sex, family background, social behaviour, health and alcohol-consumption indicators (Cortez, 2008). Such variables remain ethically sensitive even in a de-identified public dataset because their use in predictive classification may shape perceptions of a learner or influence institutional support decisions.
+831: Where the deployed system is used with new student records, confidentiality must be protected through appropriate access controls, secure storage, restricted administrative access and a defined retention policy for prediction records. The prototype should therefore not be deployed with identifiable operational records until appropriate authentication, role-based access and institutional data-protection procedures have been established.
+832: 3.9.2 Bias, Sensitive Variables and Fairness
+833: The inclusion of demographic, family and social variables introduces a risk that a predictive model may reflect or reinforce disadvantages associated with student background. Educational algorithmic bias can arise from historical patterns contained in training data, differences in measurement quality among groups, the use of sensitive attributes or the decisions made on the basis of predicted outcomes (Baker & Hawn, 2022).
+834: For this reason, the system must not be described as unbiased solely because a sensitive feature appears to have low model importance. Prior to operational use, the final model should be examined for subgroup performance differences where ethically and legally appropriate, particularly across available attributes such as sex and school. Decision-makers should also assess whether sensitive attributes are necessary to achieve the system's support-oriented purpose or whether excluding them would reduce ethical risk without materially weakening predictive utility.
+835: 3.9.3 Responsible Use of the Predictive System
+836: Predictions generated by EduPredict AI were intended to initiate supportive academic review. Where a result indicates possible poor performance or academic risk, appropriate actions may include consultation with a teacher or academic adviser, discussion of study strategies, assessment of attendance challenges and referral to available educational support. The prediction should be treated as an indicator requiring contextual review rather than as a final evaluation of personal capability.
+837: Responsible use also requires explainability appropriate to the end user. Academic staff should understand the kind of data used, the meaning of the predicted outcome, the limits of the training population and the uncertainty inherent in model predictions. Where a student may be affected by a support recommendation, the decision should remain subject to human judgement and should be capable of being questioned or reviewed, consistent with ethical principles for learning analytics (Slade & Prinsloo, 2013).
+838: 3.9.4 Contextual Limitation and Deployment Safeguards
+839: The model-development data originated from Portuguese secondary schools; therefore, the system cannot be treated as a validated predictor for students in Nigerian universities without additional evidence. Before any local operational deployment, the system should be retrained or externally validated with data that reflect the intended institutional population, educational grading structure and support practices.
+840: Table 3.8: Ethical Risks and Proposed Safeguards for EduPredict AI
+841: Ethical Issue
+842: Potential Risk
+843: Required Safeguard
+844: Population mismatch
+845: Model may not generalise from Portuguese secondary schools to Nigerian tertiary students.
+846: Carry out local validation or retraining before institutional use.
+847: Sensitive attributes
+848: Predictions may reflect background-related disadvantage.
+849: Conduct subgroup checks and review necessity of sensitive features.
+850: Prediction labelling
+851: Students may be stigmatised by risk labels.
+852: Use outputs only for supportive review with human oversight.
+853: Privacy and storage
+854: Stored prediction records may reveal sensitive student information.
+855: Implement authentication, access control, retention rules and secure storage.
+856: Prediction timing
+857: Use of G1/G2 may produce a later-stage rather than early-warning system.
+858: State prediction timing clearly and consider an early-stage model design.
+859: 3.10 Chapter Summary
+860: This chapter has described the methodology for developing EduPredict AI using the UCI Student Performance dataset. It established the quantitative predictive and system development design, identified the secondary-school population represented by the records, described the combination of the Mathematics and Portuguese language datasets, specified the original G3 academic outcome and outlined the data preparation, modelling, evaluation, deployment and ethical procedures relevant to the prototype. The chapter also identified important constraints concerning prediction timing, sensitive attributes, data privacy and external validity. The following chapter should present the implementation details and empirical model results using only the final verified training pipeline and its recorded output.
+861: REFERENCES
+862: Adekitan, A. I., & Noma-Osaghae, E. (2023). Data mining approach to predicting the performance of first year student in a university using the admission requirements. Education and Information Technologies, 28(4), 4129–4151. https://doi:10.1007/s10639-022-11312-8
+863: Aggarwal, D., Mittal, S., & Bali, V. (2021). Significance of non-academic parameters for predicting student performance using ensemble learning techniques. International Journal of System Dynamics Applications, 10(3)., 38–49. https://doi.org/10.4018/IJSDA.2021070103
+864: Ahmed, M. S. (2024). Student performance prediction using machine learning algorithms. Applied Computational Intelligence and Soft Computing, 2024, 1–15. https://doi.org/10.1155/2024/4067721
+865: Albreiki, B., Zaki, N., & Alashwal, H. (2021). A systematic literature review of student performance prediction using machine learning techniques. Education Sciences, 11(9)., 1–26. https://doi.org/10.3390/educsci11090552
+866: Albreiki, B., Zaki, N., & Alashwal, H. (2024). A comprehensive review of student performance prediction using machine learning: Trends and future directions. Computers and Education: Artificial Intelligence, 6, 100212. https://doi.org/10.1016/j.caeai.2024.100212
+867: Alyahyan, E., & Düştegör, D. (2020). Predicting academic success in higher education: Literature review and best practices. International Journal of Educational Technology in Higher Education, 17, Article 3. https://doi.org/10.1186/s41239-020-0177-7
+868: Amrieh, E. A., Hamtini, T., & Aljarah, I. (2016). Mining educational data to predict student’s academic performance using ensemble methods. International Journal of Advanced Computer Science and Applications, 7(8)., 163–170. https://doi.org/10.14569/IJACSA.2016.070821
+869: Asif, R., Merceron, A., Ali, S. A., & Haider, N. G. (2017). Analyzing undergraduate students’ performance using educational data mining. Computers & Education, 113, 177–194. https://doi.org/10.1016/j.compedu.2017.05.007
+870: Baker, R. S., & Hawn, A. (2022). Algorithmic bias in education. International Journal of Artificial Intelligence in Education, 32, 1052-1092. https://doi.org/10.1007/s40593-021-00285-9
+871: Belachew, E. B., & Gobena, F. A. (2017). Student performance prediction model using machine learning approach: The case of Wolkite University. International Journal of Advanced Research in Computer Science and Software Engineering, 7(2)., 46–50. Retrieved from http://www.ijarcsse.com/docs/publish/Feb2017/Vol7Issue2/SeriesC/Vol7Issue2C02.pdf
+872: Breiman, L. (2001). Random forests. Machine Learning, 45, 5-32. https://doi.org/10.1023/A:1010933404324
+873: Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine Learning, 20, 273-297. https://doi.org/10.1007/BF00994018
+874: Cortez, P. (2008). Student Performance [Data set]. UCI Machine Learning Repository. https://doi.org/10.24432/C5TG7T
+875: Cortez, P., & Silva, A. M. G. (2008). Using data mining to predict secondary school student performance. In A. Brito & J. Teixeira (Eds.), Proceedings of the 5th Annual Future Business Technology Conference (FUBUTEC 2008) (pp. 5-12). EUROSIS.
+876: Costa-Mendes, L., Silva, R., Oliveira, T., & Lopes, C. (2024). Predicting student performance using ensemble learning. Computers, 13(4), 94. https://doi.org/10.3390/computers13040094
+877: Francis, B. K., & Babu, S. S. (2021). Predicting academic performance of students using classification techniques. Journal of Physics: Conference Series, 1770, 1–8. https://doi.org/10.1088/1742-6596/1770/1/012018
+878: Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. The Annals of Statistics, 29(5), 1189-1232. https://doi.org/10.1214/aos/1013203451
+879: Hasan, R., Palaniappan, S., Mahmood, S., Abbas, A., & Sarker, K. U. (2021). Predicting student performance in higher education using machine learning classification techniques. International Journal of Emerging Technologies in Learning, 16(18)., 151–166. https://doi.org/10.3991/ijet.v16i18.23517
+880: He, H., & Garcia, E. A. (2009). Learning from imbalanced data. IEEE Transactions on Knowledge and Data Engineering, 21(9), 1263-1284. https://doi.org/10.1109/TKDE.2008.239
+881: Hellas, A., Ihantola, P., Petersen, A., Ajanovski, V. V., Gutica, M., Hynninen, T., Knutas, A., Leinonen, J., Messom, C., & Liao, S. N. (2018). Predicting academic performance: A systematic literature review. In Proceedings Companion of the 23rd Annual ACM Conference on Innovation and Technology in Computer Science Education (pp. 175-199). Association for Computing Machinery. https://doi.org/10.1145/3293881.3295783
+882: Hussain, M., & Khan, M. A. (2024). Student performance prediction using deep learning techniques: A comprehensive review. IEEE Access, 12, 38745–38768. https://doi:10.1109/ACCESS.2024.3367890
+883: Kabakus, A. T., & Kara, R. (2022). A highly accurate metaclassifier for placement prediction using multilayer perceptron neural networks. Procedia Computer Science, 207, 3453–3462. https://doi.org/10.1016/j.procs.2022.09.404
+884: Kaufman, S., Rosset, S., & Perlich, C. (2011). Leakage in data mining: Formulation, detection, and avoidance. In Proceedings of the 17th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 556-563). Association for Computing Machinery. https://doi.org/10.1145/2020408.2020496
+885: Namoun, A., & Alshanqiti, A. (2021). Predicting student performance using data mining and learning analytics techniques: A systematic literature review. Applied Sciences, 11(1)., 1–26. https://doi.org/10.3390/app11010237
+886: Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., VanderPlas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+887: Rebelo Marcolino, M., Reis Porto, T., Thompsen Primo, T., & et al. (2025). Student dropout prediction through machine learning optimization: Insights from Moodle log data. Scientific Reports, 15, 1–15. https://doi.org/10.1038/s41598-025-93918-1
+888: Romero, C., & Ventura, S. (2020). Educational data mining and learning analytics: An updated survey. WIREs Data Mining and Knowledge Discovery, 10(3), Article e1355. https://doi.org/10.1002/widm.1355
+889: Sanfo, J. B. M. (2025). Application of explainable artificial intelligence approach to predict student learning outcomes. Journal of Computational Social Science, 8, 1–22. https://doi.org/10.1007/s42001-024-00344-w
+890: Shahiri, A. M., Husain, W., & Rashid, N. A. (2023). A review on predicting student’s performance using data mining techniques. Procedia Computer Science, 72, 414–422. https://doi:10.1016/j.procs.2015.12.124
+891: Slade, S., & Prinsloo, P. (2013). Learning analytics: Ethical issues and dilemmas. American Behavioral Scientist, 57(10), 1510-1529. https://doi.org/10.1177/0002764213479366
+892: Sokolova, M., & Lapalme, G. (2009). A systematic analysis of performance measures for classification tasks. Information Processing & Management, 45(4), 427-437. https://doi.org/10.1016/j.ipm.2009.03.002
+893: Tomasevic, N., Gvozdenovic, N., & Vranes, S. (2021). An overview and comparison of supervised data mining techniques for student exam performance prediction. Computers & Education, 164, 1–16. https://doi.org/10.1016/j.compedu.2021.104122
+894: Uçar, E., Aslan, N., & Uçar, M. A. (2022). Educational data mining: Prediction of students' academic performance using machine learning algorithms. Smart Learning Environments, 9(1)., 1–19. https://doi.org/10.1186/s40561-022-00192-z
+895: Villano, R., Harrison, S., Lynch, G., & Chen, G. (2018). Linking early alert systems and student retention: A survival analysis approach. Higher Education, 76(6)., 903–920. https://doi.org/10.1007/s10734-018-0258-9
+896: Waheed, H., Hassan, S.-U., Aljohani, N. R., Hardman, J., Alelyani, S., & Nawaz, R. (2020). Predicting academic performance of students from VLE big data using deep learning models. Applied Sciences, 10(19)., 1–20. https://doi.org/10.3390/app10196868
+897: Wang, J., & Yu, Y. (2025). Machine learning approach to student performance prediction of online learning. PLOS ONE, 20(1)., 1–18. https://doi.org/10.1371/journal.pone.0299018
+898: Yousafzai, B. K., Hayat, M., & Afzal, S. (2021). Academic performance prediction using data mining techniques: A case study of undergraduate students. International Journal of Advanced Computer Science and Applications, 12(4)., 523–532. https://doi.org/10.14569/IJACSA.2021.0120464
+899: Zaffar, M., Hashmani, M. A., & Savita, K. S. (2021). Performance analysis of feature selection algorithm for educational data mining. International Journal of Advanced Computer Science and Applications, 12(9)., 1–8.
+900: Zhang, Y., Yun, Y., An, R., Cui, J., Dai, H., & Shang, X. (2021). Educational data mining techniques for student performance prediction: Method review and comparison analysis. Frontiers in Psychology, 12, 1–19. https://doi.org/10.3389/fpsyg.2021.698490
+901: Zou, W., Zhong, W., Du, J., & Yuan, L. (2025). Prediction of student academic performance utilizing a multi-model fusion approach in the realm of machine learning. Applied Sciences, 15(7)., 1–16. https://doi.org/10.3390/app15073550

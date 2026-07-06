@@ -1,0 +1,159 @@
+{
+    "model_comparison": [
+        {
+            "name": "Logistic Regression",
+            "accuracy": 0.9955,
+            "precision": 0.9956,
+            "recall": 0.9955,
+            "f1_score": 0.9955
+        },
+        {
+            "name": "Random Forest",
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0
+        },
+        {
+            "name": "Gradient Boosting",
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0
+        },
+        {
+            "name": "Support Vector Machine",
+            "accuracy": 0.9821,
+            "precision": 0.9824,
+            "recall": 0.9821,
+            "f1_score": 0.9819
+        }
+    ],
+    "feature_importance": [
+        {
+            "feature": "Weak_CA_Count",
+            "importance": 0.183281,
+            "importance_normalised": 1.0
+        },
+        {
+            "feature": "Core_CA_Average",
+            "importance": 0.168176,
+            "importance_normalised": 0.9176
+        },
+        {
+            "feature": "Course_CA_Average",
+            "importance": 0.157153,
+            "importance_normalised": 0.8574
+        },
+        {
+            "feature": "Lowest_CA_Score",
+            "importance": 0.148912,
+            "importance_normalised": 0.8125
+        },
+        {
+            "feature": "Previous_Course_Average",
+            "importance": 0.103597,
+            "importance_normalised": 0.5652
+        },
+        {
+            "feature": "University_CA_Average",
+            "importance": 0.089126,
+            "importance_normalised": 0.4863
+        },
+        {
+            "feature": "Previous_CGPA",
+            "importance": 0.058834,
+            "importance_normalised": 0.321
+        },
+        {
+            "feature": "Lowest_Previous_Score",
+            "importance": 0.03844,
+            "importance_normalised": 0.2097
+        },
+        {
+            "feature": "Study_Hours_Per_Week",
+            "importance": 0.026668,
+            "importance_normalised": 0.1455
+        },
+        {
+            "feature": "Weak_Previous_Count",
+            "importance": 0.015973,
+            "importance_normalised": 0.0872
+        },
+        {
+            "feature": "Elective_CA_Average",
+            "importance": 0.005423,
+            "importance_normalised": 0.0296
+        },
+        {
+            "feature": "Age",
+            "importance": 0.001271,
+            "importance_normalised": 0.0069
+        },
+        {
+            "feature": "Level",
+            "importance": 0.001039,
+            "importance_normalised": 0.0057
+        },
+        {
+            "feature": "Total_Units",
+            "importance": 0.000956,
+            "importance_normalised": 0.0052
+        },
+        {
+            "feature": "Socioeconomic_Status",
+            "importance": 0.000939,
+            "importance_normalised": 0.0051
+        },
+        {
+            "feature": "Gender",
+            "importance": 0.000214,
+            "importance_normalised": 0.0012
+        },
+        {
+            "feature": "Semester",
+            "importance": 0.0,
+            "importance_normalised": 0.0
+        }
+    ],
+    "class_distribution": {
+        "Average": 645,
+        "Excellent": 317,
+        "At-Risk": 158
+    },
+    "class_distribution_pct": {
+        "Average": 57.6,
+        "Excellent": 28.3,
+        "At-Risk": 14.1
+    },
+    "best_model_name": "Random Forest",
+    "dataset_info": {
+        "total_records": 1120,
+        "train_records": 896,
+        "test_records": 224,
+        "features": [
+            "Gender",
+            "Age",
+            "Socioeconomic_Status",
+            "Level",
+            "Semester",
+            "Study_Hours_Per_Week",
+            "Previous_CGPA",
+            "Previous_Course_Average",
+            "Lowest_Previous_Score",
+            "Weak_Previous_Count",
+            "Course_CA_Average",
+            "Lowest_CA_Score",
+            "Weak_CA_Count",
+            "Core_CA_Average",
+            "Elective_CA_Average",
+            "University_CA_Average",
+            "Total_Units"
+        ],
+        "target_classes": [
+            "At-Risk",
+            "Average",
+            "Excellent"
+        ]
+    }
+}

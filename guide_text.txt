@@ -1,0 +1,397 @@
+THE INFLUENCE OF SOCIAL MEDIA ON ADOLESCENT MENTAL HEALTH: AN ANALYSIS OF ANXIETY AND DEPRESSION
+BY
+IGWE, CHUKWUEMEKA HASSAN(20CH090900)
+A PROJECT PROPOSAL SUBMITTED TO THE DEPARTMENT OF COMPUTER AND INFORMATION SCIENCES, COLLEGE OF SCIENCE AND TECHNOLOGY, COVENANT UNIVERSITY, OTA, OGUN STATE.
+IN PARTIAL FULFILMENT OF THE REQUIREMENTS FOR THE AWARD OF THE BACHELOR OF SCIENCE (HONOURS) DEGREE IN COMPUTER SCIENCE.
+JULY, 2024
+CERTIFICATION
+I hereby certify that this project was carried out by Igwe, Chukwuemeka Hassan in the department of Computer and Information Sciences, college of Science and Technology, Covenant University, Ota, Ogun State, Nigeria under my supervision. 
+Prof. Otavie L. Okuoyo___________________________
+Supervisor           Signature and Date
+Prof. Olufunke O. Oladipupo ___________________________
+Head of Department           Signature and Date
+DEDICATION
+This project is dedicated to Almighty God for His guidance, wisdom, and strength throughout this journey. I also dedicate this work to my beloved parents, Mr and Mrs Obadina Igwe, whose unwavering support, encouragement, and sacrifices have been my greatest motivation.
+ACKNOWLEDGEMENTS
+A special appreciation goes to my esteemed supervisor, Prof. Otavie L. Okuoyo, for his invaluable guidance, mentorship, and patience. To my friends, whose kindness and encouragement have been a pillar of support, I am truly grateful. 
+TABLE OF CONTENT
+CONTENT    PAGES
+COVER PAGE    i
+CERTIFICATION   ii
+DEDICATION  iii
+ACKNOWLEDGEMENTS  vi
+TABLE OF CONTENT   v
+LIST OF FIGURES vii
+LIST OF TABLESviii
+ABBREVIATIONS  ix
+ABSTRACT   x
+CHAPTER ONE: INTRODUCTION   1
+1.1Background Information   1
+1.2Statement of the Problem   2
+1.3Research Hypothesis   2
+1.4Aim and Objectives   3
+1.5Research Methodology   3
+1.6Significance of the Study   4
+1.7Scope of the Study   4
+1.8Project Outline   5
+CHAPTER TWO: LITERATURE REVIEW  16
+2.1Preamble   6
+2.2Theoretical Framework   6
+2.3Social Media Usage Among Adolescents   8
+2.3.1Prevalence and Popular Platforms   8
+2.3.2Patterns of Usage   8
+2.3.3Factors Influencing Usage   9
+2.3.4Benefits of Social Media Usage   9
+2.3.5Risks Associated with Social Media Usage  10
+2.3.6Implications for Mental Health  10
+2.4Psychological Impacts of Social Media  10
+2.4.1Positive Psychological Impacts  11
+CHAPTER THREE: RESEARCH METHODOLOGY  12
+3.1Preamble  12
+3.2Research Design  12
+3.3Population of the Study  12
+3.4Sample and Sampling Technique  12
+3.5Instrument for Data Collection  13
+3.6Validity and Reliability of the Instrument  13
+3.7Method of Data Collection  13
+3.8Method of Data Analysis  14
+3.9Ethical Considerations  14
+CHAPTER FOUR: DATA PRESENTATION AND ANALYSIS  15
+4.1Preamble  15
+4.2Demographic Characteristics of Respondents  15
+4.3Social Media Usage Patterns  16
+4.4Levels of Anxiety and Depression  17
+4.5Correlation Between Social Media Use and Mental Health   18
+4.6Discussion of Findings  20
+CHAPTER FIVE: SUMMARY, CONCLUSION, AND RECOMMENDATIONS   22
+5.1Summary   22
+5.2Recommendations  22
+5.2Limitations of the Study  23
+5.3Conclusion  23
+REFERENCES  25
+LIST OF FIGURES
+FIGURETITLE OF FIGURE     PAGES
+4.1Correlation Between Social Media Hours and GAD-7 Scores  19
+4.2Correlation Between Social Media Hours and PHQ-9 Scores  20
+LIST OF TABLES
+TABLETITLE OF TABLE     PAGES
+1.1Mapping of Objectives to Methods    3
+4.1Age Distribution of Respondent  16
+4.2Gender Distribution of Respondent    16
+4.3Daily Social Media Usage    17
+4.4Anxiety Levels (GAD-7 Scores)  18
+4.5Depression Levels (PHQ-9 Scores)  18
+ABBREVIATIONS
+GAD-7Generalized Anxiety Disorder-7 
+PHQ-9Patient Health Questionnaire-9
+SDTSelf-Determination Theory
+SPSSStatistical Package for Social Sciences 
+VLANARREVery Long Abbreviation for Neural Attention Regression model with Review-level Explanations
+Note: 
+Abbreviations should in alphabetical order. Use tab for creating consistent space between the abbreviation (on the left) and the meaning of the abbreviation (on the right)
+For long abbreviations with meaning taking more than a line, ensure that the next line is arranged such that it aligns with the starting point of the abbreviation on the first line (as in the case of VLANARRE)
+ABSTRACT
+This study investigates the influence of social media usage on the mental health of adolescents, with a particular focus on anxiety and depression. In light of the growing prevalence of social media engagement among young people, this research aims to explore how the duration and nature of social media interaction relate to psychological well-being. A descriptive survey research design was employed, involving 200 adolescents aged 13 to 19 from selected secondary schools and youth centers. Data were collected using a structured questionnaire comprising sections on demographic information, social media usage patterns, and mental health assessments using standardized tools (GAD-7 and PHQ-9). Findings revealed that a significant proportion of adolescents spend between 2 to over 6 hours daily on platforms such as Instagram, TikTok, and Snapchat. Analysis using the Statistical Package for Social Sciences (SPSS) showed that 55% and 54% of respondents experienced moderate to severe levels of anxiety and depression, respectively. Pearson correlation analysis indicated a strong positive relationship between time spent on social media and both anxiety (r = 0.62) and depression (r = 0.58), suggesting that increased social media use is associated with higher levels of psychological distress. The study underscores the potential mental health risks associated with excessive social media use and calls for increased awareness, digital literacy, and supportive interventions among adolescents and caregivers.
+Keywords: Social media, Adolescents, Mental health, Anxiety, Depression, Digital behaviour
+ INTRODUCTION
+1.1Background Information
+The Background Information section provides a foundational overview of the topic under investigation. It explains the context within which the study is situated, offering insights into the relevant history, current trends, and broader significance. For instance, consider the background information below: 
+Social media has rapidly transformed the landscape of communication, particularly among younger generations, since its emergence in the early 2000s. Platforms like Facebook, Instagram, and Twitter have become deeply embedded in the daily lives of billions, facilitating unprecedented connectivity and information exchange (Boyd & Ellison, 2007). The rise of social media has brought about significant societal shifts, with users spending substantial portions of their day engaging with these platforms. A 2021 report by the Pew Research Center found that 72% of Americans use at least one social media platform, with usage rates even higher among adolescents and young adults (Pew Research Center, 2021).
+However, as social media use has grown, so have concerns regarding its impact on mental health. Numerous studies have highlighted a link between social media use and various mental health issues, including anxiety, depression, and body image concerns (Kross et al., 2013; Twenge & Campbell, 2018). Adolescents appear to be particularly susceptible to these effects, as they navigate both their offline and online identities during critical developmental periods (Valkenburg & Peter, 2011). The nature of social media, with its emphasis on self-presentation and comparison with others, can exacerbate feelings of inadequacy and lead to negative self-perceptions among young users (Perloff, 2014).
+Despite the wealth of studies conducted on this topic, there remain significant gaps in understanding the specific ways social media influences mental health outcomes across diverse user groups. This study situates itself within this growing body of research, aiming to further elucidate the complex relationship between social media usage and mental health, with a particular focus on adolescent users. The findings of this study could have significant implications for public health initiatives, educational interventions, and policy development related to social media use (Anderson & Jiang, 2018).
+1.2Statement of the Problem
+This section outlines the specific issue that the research aims to address. It should clearly define the gap in knowledge or the problem that has prompted the study. For example, consider the statement of the problem below: 
+The pervasive use of social media among adolescents has raised concerns about its potential impact on mental health. While it is a key part of daily life, its effects on psychological well-being remain unclear (Kross et al., 2013). Research studies link social media to increased anxiety, depression, and lower self-esteem in adolescents (Twenge & Campbell, 2018), but the exact nature and extent of these effects are not fully understood. This knowledge gap hinders the development of effective interventions (O’Keeffe & Clarke-Pearson, 2011). This study aims to investigate the specific effects of social media use on adolescent mental health and provide insights to inform evidence-based interventions.
+Note:
+Your statement should be backed up with research and you must provide an in-text citation for the reference.
+Connected the gap to the purpose of the study. Highlighted how the research will address the identified gap and be concise as much as possible.
+1.3.Research Hypothesis
+The Research Hypothesis presents the primary assumptions or predictions that the study will test. For instance, consider the hypothesis below:
+The hypothesis for this study is that increased use of social media is positively correlated with higher levels of anxiety and depression among adolescents.
+1.4.Aim and Objectives
+The Aim and Objectives section outlines the overall goal of the research and breaks it down into specific, measurable objectives. For example, consider the aim and objectives below:
+This project assesses the impact of social media use on adolescent mental health. The following objectives will guide in the achievement of the stated aim:
+To determine the frequency and nature of social media use among adolescents.
+To identify common mental health outcomes associated with high social media usage.
+To evaluate the relationship between social media use and self-reported anxiety and depression.
+1.5.Research Methodology
+In this section, a brief description of the research design, data collection methods, and analysis techniques is provided. For example, consider the research methodology below:
+This study employs a mixed-methods approach, utilizing both surveys and interviews. Quantitative data will be gathered through a structured questionnaire, while qualitative data will be collected via semi-structured interviews to provide deeper insights into the participants' experiences. Table 1.1 shows the mapping of each objective to a method:
+Table 1.1: Mapping of Objectives to Methods
+SN
+Objectives
+Methodology
+1.
+To determine the frequency and nature of social media use among adolescents.
+A structured questionnaire will gather data on the frequency of social media use, including hours spent daily, preferred platforms, and types of activities engaged in (e.g., browsing, posting, messaging).
+2.
+To identify common mental health outcomes associated with high social media usage.
+The survey will include standardized mental health scales (e.g., GAD-7 for anxiety, PHQ-9 for depression) to assess mental health outcomes. Semi-structured interviews will provide deeper insight into how participants perceive the impact of social media on their well-being.
+3.
+To evaluate the relationship between social media use and self-reported anxiety and depression.
+Data from the survey will be analyzed using correlation and regression techniques to evaluate the relationship between social media usage patterns (e.g., time spent, frequency of use) and self-reported anxiety and depression scores.
+1.6.Significance of the Study
+This section explains the potential impact and importance of the research. It discusses who may benefit from the findings and how they may be applied in practice. For example, consider the significance of the study below:
+The study will contribute to the existing body of knowledge on the impact of social media on mental health, offering insights that could be used by mental health professionals, educators, and policymakers to develop more effective support systems for adolescents.
+1.7.Scope of the Study
+The Scope of the Study outlines the boundaries of the research, detailing what will and will not be covered. For example, consider the scope of the study below:
+The study focuses on adolescents aged 13-18 years and will only consider mainstream social media platforms namely Facebook, Instagram, Twitter, Snapchat and TikTok. These platforms are selected because they are the most commonly used by this age group and have the highest levels of user engagement. The study will be geographically limited to urban areas within the United States, where social media usage is more prevalent and access is readily available.
+1.8.Project Outline
+The Outline of the Project provides a brief overview of the structure of the entire report or thesis. For example:
+This proposal is organized into two chapters to systematically address the research topic, The Influence of Social Media on Adolescent Mental Health: An Analysis of Anxiety and Depression. Chapter One provides the foundation of the study, including the background information, problem statement, research objectives, research questions, hypothesis, significance of the study, and the scope and limitations. Chapter Two focuses on the literature review, exploring relevant theoretical frameworks such as Self-Determination Theory and Social Identity Theory, while examining existing studies related to the impact of social media on adolescent mental health. This chapter also identifies gaps in the literature that the proposed research aims to address.
+LITERATURE REVIEW
+2.1Preamble
+This section introduces the chapter and outlines the scope of the literature review. It briefly explains the main themes or topics covered in the chapter. For instance:
+In this chapter, relevant literature on social media usage and its effects on adolescent mental health is reviewed. The chapter is structured around three main themes: the prevalence and patterns of social media use among adolescents, the psychological impacts of social media, and existing interventions to mitigate adverse mental health outcomes. This literature review aims to identify gaps in current research and to provide a theoretical basis for the study.
+2.2Theoretical Framework
+The Theoretical Framework section discusses the theories or models guiding the research. This part may include social, psychological, or technological theories relevant to the topic. For example, consider the “theoretical framework section” below:
+The Theoretical Framework is essential to grounding this study, providing a lens through which the research examines how social media impacts adolescent mental health. Theories such as Social Comparison Theory, Uses and Gratifications Theory, and Self-Determination Theory are pivotal in understanding the psychological and social drivers influencing social media use among adolescents, as well as the implications of these interactions.
+Social Comparison Theory offers a critical perspective on how adolescents engage with social media. Developed by Festinger (1954), this theory suggests that individuals assess their self-worth by comparing themselves with others. On social media, adolescents are constantly exposed to carefully curated content that can create unrealistic standards of success, beauty, and happiness. They often perceive the curated images and positive updates on social media as genuine reflections of the lives of others, which can lead to feelings of inadequacy, low self-esteem, and increased anxiety (Vogel, Rose, Roberts & Eckles, 2014). Huang, (2017) highlights that these comparisons are intensified by the asynchronous, often superficial nature of social media interactions, where users typically present an idealized version of themselves. This effect is particularly pronounced on visual platforms like Instagram, where adolescents may feel inadequate when comparing themselves to idealized images (Pedalino & Camerini, 2022). According to social comparison theory, continuous exposure to these polished portrayals can substantially contribute to depressive symptoms among adolescents, as they may perceive their own lives as less fulfilling in comparison (Appel, Gerlach & Crusius, 2016). The theory thus underscores how frequent social comparisons can exacerbate feelings of depression and reduce self-esteem among adolescents (Burnell, George, Vollet, Ehrenreich & Underwood, 2019).
+The Uses and Gratifications Theory provides insight into the psychological motivations that drive adolescents to engage with social media. This theory, articulated by Katz, Blumler and Gurevitch (1973), has evolved to reflect digital media’s changing the landscape, particularly social media. It posits that users are active agents seeking to satisfy various needs, such as entertainment, information, and social interaction. Recent studies have found that adolescents are often motivated to use social media to foster connections and gain validation from peers (Armstrong-Carter, Garrett, Nick, Prinstein & Telzer, 2022). However, these motivations can backfire, leading to potential mental health issues when expectations are not met or when they encounter negative interactions (Cauberghe, Van Wesenbeeck, De Jans, Hudders & Ponnet, 2021). The theory helps clarify how social media fulfils adolescents’ needs for belonging and acceptance, while simultaneously increasing their vulnerability to negative feedback and social isolation (Kelly, Zilanawala, Booker & Sacker, 2018).
+Furthermore, Self-Determination Theory (SDT), introduced by Ryan and Deci (1985), explores the intrinsic and extrinsic motivations influencing behaviours, positing that individuals have fundamental needs for competence, autonomy, and relatedness. Social media can satisfy these needs by enabling adolescents to express themselves, connect with others, and achieve a sense of belonging (Choi & Lim, 2022). However, SDT also highlights that when these needs are thwarted, such as when adolescents feel pressured to conform to societal standards or when they encounter cyberbullying, their mental well-being may suffer (Ahn & Shin, 2023). This aspect is particularly pertinent as online interactions can undermine the authenticity of relationships, impacting adolescents’ self-worth and satisfaction (Orben, 2020).
+Social Identity Theory is another framework relevant to this study, as it explains how individuals derive part of their identity from the social groups they belong to. Adolescents on social media often engage in identity exploration, influenced by the perceived norms and values of the online communities they interact with (Smith & Anderson, 2022). This theory suggests that while social media can foster positive identity development, it may also pressure adolescents to adopt identities that align with group norms, potentially leading to stress and a loss of individuality (Verduyn et al., 2020).
+These theories provide a robust framework for analysing the complex interactions between adolescents and social media, helping to unpack the varied psychological effects that arise from social media use. They underscore how both the motivations for using social media and the types of interactions adolescents have online contribute to mental health outcomes, laying a foundation for understanding the broader implications of adolescent social media use.
+2.3Social Media Usage Among Adolescents
+Social media has become an indispensable part of the daily lives of adolescents, profoundly shaping their communication, entertainment, and self-expression. Adolescents use social media for various purposes, such as maintaining relationships, discovering new trends, and exploring their identities. This section explores the extent, patterns, and implications of adolescent social media usage, supported by recent research.
+2.3.1Prevalence and Popular Platforms
+Recent studies highlight the ubiquity of social media among adolescents. According to the Pew Research Center (2023), 95% of adolescents in the United States aged 13 to 17 have access to smartphones, with 89% actively engaging with at least one social media platform. Among these, YouTube emerges as the most widely used platform, engaging 95% of teens, followed by TikTok (67%), Instagram (62%), and Snapchat (59%). These platforms cater to different preferences, with YouTube serving as a hub for video content, TikTok focusing on short creative clips, and Instagram and Snapchat emphasizing visual storytelling and communication.
+2.3.2Patterns of Usage
+Adolescents' engagement with social media is frequent and sustained. On average, teens spend 4.8 hours daily on these platforms, with higher usage during weekends and school holidays (Statista, 2024). This time is often divided among various activities such as:
+Socializing: Teens frequently use platforms to communicate with peers via direct messages, comments, or video calls.
+Content Creation: Many adolescents actively participate by posting images, videos, or stories to showcase their lives and creative abilities.
+Information Seeking: Platforms like YouTube and TikTok are increasingly used to access information, tutorials, and news updates.
+Entertainment: Adolescents consume entertainment content, including memes, music, and trending videos.
+Adolescents tend to engage more with platforms that allow personalized experiences, such as tailored feeds and algorithm-driven recommendations, which keep them actively engaged for extended periods (Twenge & Campbell, 2018).
+2.3.3Factors Influencing Usage
+Several factors contribute to adolescents' patterns of social media use:
+Peer Influence: Social validation through likes, comments, and shares often motivates adolescents to remain active on social media (Verduyn, Gugushvili & Kross, 2022).
+FOMO (Fear of Missing Out): The need to stay updated with peers’ activities and trends drives frequent social media checks (Statista, 2024).
+Identity Exploration: Adolescents use social media as a space to experiment with their identities and gain feedback from peers, shaping their sense of self (Choi & Lim, 2022).
+2.3.4Benefits of Social Media Usage
+Despite concerns about the negative impacts, social media also offers several benefits:
+Enhanced Connectivity: Platforms enable adolescents to maintain friendships, especially during life transitions like changing schools.
+Access to Support Networks: Social media provides spaces where adolescents can seek advice, share experiences, and engage with supportive communities, particularly for marginalized groups (Pew Research Center, 2023).
+Learning Opportunities: Social media can serve as a platform for educational content, skill development, and exposure to diverse perspectives.
+2.3.5Risks Associated with Social Media Usage
+The following are the ways excessive social media use can adversely affect the mental health of adolescents:
+Social Comparison: Viewing curated, idealized content from peers often leads to feelings of inadequacy and low self-esteem (Verduyn et al., 2020).
+Cyberbullying: Negative interactions, such as bullying and harassment, are prevalent risks, potentially leading to increased anxiety and depression (Twenge & Campbell, 2018).
+Sleep Disruption: Late-night scrolling and exposure to blue light can disturb adolescents' sleep cycles, further exacerbating mental health issues (Statista, 2024).
+2.3.6Implications for Mental Health
+The relationship between social media use and adolescent mental health is complex. While some adolescents benefit from positive reinforcement and community building, others face challenges such as anxiety, depression, and stress due to the pressures of online interaction (Twenge & Campbell, 2018). Therefore, understanding usage patterns and their implications is essential for developing strategies to mitigate risks while enhancing the benefits of social media for adolescents.
+2.4Psychological Impacts of Social Media
+Social media has fundamentally transformed the way individuals interact, particularly among adolescents, shaping their psychological experiences and mental health. While these platforms provide opportunities for self-expression and connectivity, they also expose adolescents to challenges that can influence their psychological well-being. This section explores both the positive and negative psychological impacts of social media, supported by research evidence.
+2.4.1Positive Psychological Impacts
+Despite concerns about the adverse effects of social media, its use can yield several psychological benefits, especially when used in moderation and within supportive contexts.
+Enhancement of Social Connections: Social media enables adolescents to maintain and strengthen relationships, even with friends and family members who are geographically distant. This connectivity fosters a sense of belonging and support, particularly for individuals who might feel isolated in offline settings (Ellison et al., 2020). 
+Opportunities for Self-Expression: Adolescents often use social media as a medium to express their thoughts, emotions, and identities. Platforms like TikTok and Instagram allow users to share creative content, which can enhance self-confidence and a sense of achievement (Choi & Lim, 2022). Adolescents engaged in content creation often report feelings of accomplishment and pride.
+Access to Mental Health Resources: Social media can serve as a gateway to mental health support, offering adolescents information about coping strategies, professional resources, and peer support groups. Platforms like YouTube host educational content on topics such as stress management and mindfulness, contributing positively to emotional regulation (Twenge & Campbell, 2018).
+CHAPTER THREE
+RESEARCH METHODOLOGY
+3.1Preamble
+This chapter outlines the research methodology adopted for the study. It provides a detailed description of the research design, population, sample and sampling techniques, data collection instruments, procedures, and methods of analysis. It also addresses issues of validity, reliability, and ethical considerations that guide the conduct of the research. The chosen methodology is aimed at ensuring the reliability and credibility of the findings concerning the influence of social media on adolescent mental health, particularly anxiety and depression.
+3.2Research Design
+This study adopts a descriptive survey research design, which is appropriate for obtaining quantitative data regarding the influence of social media on the mental health of adolescents. The design enables the collection of relevant data from a large number of respondents within a short period. This approach facilitates an in-depth analysis of the relationship between social media usage and mental health indicators such as anxiety and depression among adolescents.
+3.3Population of the Study
+The population of this study comprises adolescents aged between 13 and 19 years who are enrolled in selected public and private secondary schools as well as those who attend organized programs at youth centers. These institutions are situated within urban and semi-urban areas to ensure a broad demographic and socio-cultural representation of adolescents who are active users of social media platforms.
+3.4Sample and Sampling Technique
+A total sample size of 200 adolescents will be selected for the study. The stratified random sampling technique will be utilized to ensure that the sample accurately represents key demographic variables such as gender, age group (13–15, 16–17, and 18–19 years), and socio-economic status (low, middle, and high income). Stratification ensures that all subgroups are adequately represented, and random selection within each stratum guarantees fairness and reduces selection bias.
+3.5Instrument for Data Collection
+The primary instrument for data collection will be a structured, self-administered questionnaire. The questionnaire will be divided into three major sections:
+Section A: Demographic Information, including age, gender, school type, and socio-economic background.
+Section B: Social Media Usage Patterns covering frequency of use, duration, preferred platforms, and types of activities performed.
+Section C: Mental Health Assessment, comprising standardized and validated tools such as the Generalized Anxiety Disorder-7 (GAD-7) scale for measuring anxiety levels and the Patient Health Questionnaire-9 (PHQ-9) for assessing symptoms of depression.
+3.6Validity and Reliability of the Instrument
+To ensure content and face validity, the questionnaire will be subjected to expert review by professionals in the fields of psychology, educational research, and adolescent health. Their feedback will be used to refine the items for clarity, relevance, and appropriateness. A pilot study will be conducted with 20 adolescents from a non-sampled school to test the reliability of the instrument. Internal consistency reliability will be determined using Cronbach's alpha coefficient, with a threshold of 0.70 considered acceptable for research instruments.
+3.7Method of Data Collection
+The data collection process will involve the physical administration of questionnaires to the selected schools and youth centers. Before administration, consent forms will be distributed to participants and their parents or legal guardians, as applicable. Trained research assistants will guide respondents during the completion of the questionnaires to ensure understanding and accuracy. Data will be collected over a period of two weeks to allow flexibility and accommodate school schedules.
+3.8Method of Data Analysis
+The collected data will be organized and analyzed using the Statistical Package for Social Sciences (SPSS). Descriptive statistics such as frequencies, percentages, means, and standard deviations will be used to summarize respondents’ demographic characteristics and social media usage. Inferential statistics, including Pearson’s correlation coefficient, will be used to determine the strength and direction of relationships between social media use and mental health indicators. Multiple regression analysis will be employed to predict the impact of various aspects of social media usage on anxiety and depression scores.
+3.9Ethical Considerations
+This study will strictly adhere to ethical standards in research involving human participants. Informed consent will be obtained from all respondents and their guardians (where necessary) before participation. Confidentiality of participants’ information will be maintained, and responses will be used strictly for research purposes. The right to decline participation or withdraw from the study at any point without penalty will be clearly communicated. Additionally, participants who exhibit signs of distress during the study will be referred to appropriate counseling services.
+CHAPTER FOUR
+DATA PRESENTATION AND ANALYSIS
+4.1Preamble
+This chapter presents the analysis of the data collected from the study participants in order to answer the research questions posed in earlier chapters. It provides an in-depth look at the demographic characteristics of respondents, their patterns of social media usage, and their self-reported levels of anxiety and depression. Additionally, the chapter uses statistical methods to assess the correlation between social media engagement and mental health outcomes. The findings are presented using descriptive and inferential statistics, supported by tables, charts, and narrative explanations.
+4.2Demographic Characteristics of Respondents
+Understanding the demographic background of the respondents is crucial in providing context for the analysis. The demographic data collected include age, gender, educational level, and socio-economic background of the adolescent participants.
+Age: Respondents ranged between 13 to 19 years of age. The majority fell within the 15–17-year age bracket (Table 4.1).
+Gender: A balanced gender distribution was maintained to ensure representativeness. 52% of the participants were female, 47% male, and 1% identified as non-binary or preferred not to disclose (Table 4.2).
+Educational Level: Most participants were enrolled in secondary schools, with some in early post-secondary education.
+Socio-Economic Background: Participants were categorized into low, middle, and high socio-economic groups based on parental occupation, income, and educational level.
+These details were visualized using pie charts and bar graphs to highlight the distribution of respondents across different categories.
+Table 4.1 Age Distribution of Respondent 
+Age Group (Years)
+Frequency
+Percentage (%)
+13 - 14
+20
+16%
+15 - 17 
+75
+62%
+18 - 19
+26
+22%
+Total
+121
+100%
+Table 4.2 Gender Distribution of Respondent 
+Gender
+Frequency
+Percentage (%)
+Male
+57
+47.1%
+Female 
+64
+52.9%
+Total
+121
+100%
+4.3Social Media Usage Patterns
+This section examines how adolescents interact with social media platforms. Key variables analyzed include:
+Duration of Use: The majority of adolescents spend a considerable portion of their day on social media. According to the data presented in Table 4.3:
+34.7% reported using social media for 2 to 4 hours daily.
+33.1% for 4 to 6 hours daily and
+13.2% indicated usage of more than 6 hours per day.
+This means that approximately 81% of adolescents spend between 2 to over 6 hours on social media each day, reflecting a high level of engagement. Only a small portion (6.6%) use it for less than an hour.
+Platforms Used: The most commonly used platforms among respondents were Instagram, TikTok, Snapchat and WhatsApp. Platforms like Facebook and Twitter were reported as being less frequently used, reflecting current trends among the adolescent demographic.
+Primary Purpose of Use: Adolescents reported engaging with social media for various reasons, including peer communication, entertainment, seeking information, and content creation. These activities show that social media serves both recreational and functional purposes in their daily lives.
+Overall, the data indicates that social media usage is a routine part of adolescent life, with a significant proportion spending multiple hours per day across several platforms.
+Table 4.3 Daily Social Media Usage 
+Duration of Use (Hours)
+Frequency
+Percentage (%)
+Less than 1 hour
+8
+6.6%
+1 - 2
+15
+12.4%
+2 - 4
+42
+34.7%
+4 - 6
+40
+33.1%
+More than 6 hours
+16
+13.2%
+Total
+121
+100%
+4.4Levels of Anxiety and Depression
+To assess mental health status, the study employed two standardized psychological assessment tools:
+GAD-7 (Generalized Anxiety Disorder Scale): This 7-item instrument measures the severity of anxiety symptoms. The severity level can be minimal anxiety, mild anxiety, moderate anxiety and severe anxiety.
+PHQ-9 (Patient Health Questionnaire): This 9-item instrument evaluates the severity of depressive symptoms. The severity level can be minimal depression, mild depression, moderate depression and severe depression.
+The distribution of the scores of the respondents for anxiety severity is shown in Table 4.4.
+Table 4.4 Anxiety Levels (GAD-7 Scores)
+Level of Anxiety
+Score Range
+Frequency
+Percentage (%)
+Minimal
+0 - 4 
+18
+15%
+Mild
+5 - 9
+36
+30%
+Moderate
+10 - 14
+42
+35%
+Severe
+15 - 21
+25
+20%
+Total
+121
+100%
+The distribution of the scores of the respondents for depression severity is shown in Table 4.5.
+Table 4.5 Depression Levels (PHQ-9 Scores)
+Level of Depression
+Score Range
+Frequency
+Percentage (%)
+Minimal
+0 - 4 
+22
+18%
+Mild
+5 - 9
+34
+28%
+Moderate
+10 - 14
+39
+32%
+Severe
+15 - 27
+26
+22%
+Total
+121
+100%
+A considerable portion of adolescents showed moderate to high levels of anxiety and depression, which raises concerns about the state of adolescent mental health in relation to their digital habits.
+4.5Correlation Between Social Media Use and Mental Health
+This section presents the results of statistical analysis used to determine the relationship between social media usage and mental health indicators. Pearson Correlation Coefficient (r) was calculated to evaluate the relationship between hours spent on social media and scores on the GAD-7 and PHQ-9 scales.
+Social Media Hours vs. Anxiety (GAD-7): r = 0.62 (p < 0.01): This indicates a strong positive correlation as shown in Figure 4.1.
+Social Media Hours vs. Depression (PHQ-9): r = 0.58 (p < 0.01): This also indicates a significant positive correlation as shown in Figure 4.2.
+These findings suggest that increased time spent on social media is associated with higher levels of anxiety and depression among adolescents. The analysis controlled for demographic variables to minimize confounding influences.
+Additional tests such as linear regression analysis confirmed the predictive power of social media engagement on mental health outcomes, further strengthening the validity of the findings.
+Figure 4.1: Correlation Between Social Media Hours and GAD-7 Scores
+Here is Figure 4.1: Correlation Between Social Media Hours and GAD-7 Scores. The scatter plot shows individual data points representing respondents, and the red dashed line indicates a positive correlation, as time spent on social media increases, GAD-7 anxiety scores tend to rise. This visual supports the statistical analysis linking social media use with elevated anxiety levels.
+Figure 4.2: Correlation Between Social Media Hours and PHQ-9 Scores
+Here is Figure 4.2: Correlation Between Social Media Hours and PHQ-9 Scores. The scatter plot shows a positive relationship between the number of hours spent on social media and PHQ-9 depression scores, indicating that increased usage tends to be associated with higher levels of depressive symptoms among adolescents. ​
+4.6Discussion of Findings
+The results of this study align with previous research that identifies excessive social media use as a significant risk factor for poor mental health outcomes in adolescents. The high levels of anxiety and depression observed in this study are consistent with studies by Twenge et al. (2017) and Keles et al. (2020), which found similar associations. Several factors may explain this correlation:
+Social Comparison: Adolescents frequently compare themselves to idealized images posted by peers and influencers, leading to reduced self-esteem.
+Cyberbullying: Some respondents reported experiences with online harassment, which is known to be associated with emotional trauma.
+Disrupted Sleep: Many adolescents engage in nighttime browsing, disrupting their sleep cycles and contributing to mood disorders.
+Addiction and Validation Seeking: The compulsive need to check notifications and gain social approval can lead to stress and a sense of inadequacy.
+While not all social media use is harmful, the patterns revealed in this study suggest that when use becomes excessive or emotionally driven, it can significantly impact an adolescent’s mental health. These findings provide a foundation for policy recommendations and interventions to support youth well-being in the digital age.
+CHAPTER FIVE
+SUMMARY, CONCLUSION, AND RECOMMENDATIONS
+5.1Summary 
+This study investigated the impact of social media usage on the mental health of adolescents, focusing specifically on symptoms of anxiety and depression. The findings revealed a strong and statistically significant relationship between the frequency and intensity of social media engagement and the prevalence of anxiety and depressive symptoms among adolescents.
+Adolescents who reported higher levels of social media use, measured in terms of time spent online, frequency of checking platforms, and emotional investment, tended to exhibit increased levels of restlessness, worry, sadness, low self-esteem, and social withdrawal. The study also noted that adolescents exposed to cyberbullying, social comparison, and validation-seeking behaviors through social media platforms were more likely to experience heightened psychological distress.
+While some positive aspects of social media were acknowledged, such as increased social connection, access to information, and self-expression, the data clearly showed that excessive or unregulated use can contribute to emotional instability and negative mental health outcomes.
+5.2Recommendations
+In light of the findings, the following recommendations are proposed:
+Parental and Educational Guidance: Parents, teachers, and guardians should play an active role in monitoring and guiding adolescents' use of social media. Setting healthy boundaries, encouraging digital literacy, and fostering open conversations about online experiences can help mitigate the negative impacts.
+Implementation of Mental Health Programs: Schools should incorporate mental health education into their curricula. Workshops, peer support groups, and counseling services should be made accessible to students to help them manage stress, build resilience, and recognize early signs of mental health issues.
+Social Media Platform Responsibility: Social media companies should take greater responsibility in creating safer online environments. This includes developing features that promote well-being, such as time management reminders, mental health resources, content moderation, and support tools for users who may be experiencing psychological distress.
+Encouragement of Offline Engagement: Encouraging adolescents to participate in offline activities such as sports, arts, community service, and family time can provide balance and reduce dependency on digital validation.
+5.3Limitations of the Study
+This section acknowledges the constraints faced by the study, such as time, resources, or methodological limitations. For example, consider the limitations of the study below:
+The research was limited to a sample of 200 adolescents from selected schools and youth centers, which may not fully capture the diversity of adolescents in different regions or socio-cultural settings. The reliance on self-reported data through questionnaires also presents a potential for bias, as respondents may have underreported or exaggerated their social media use or emotional experiences. Additionally, the cross-sectional nature of the study restricts the ability to determine causality between social media usage and mental health outcomes such as anxiety and depression. Although standardized screening tools like the Generalized Anxiety Disorder-7 (GAD-7) and Patient Health Questionnaire-9 (PHQ-9) were used, they do not replace clinical diagnoses, thus limiting the depth of mental health assessment.
+5.4Conclusion
+The findings of this research underscore the influential role that social media plays in shaping the mental well-being of adolescents. As a double-edged sword, social media offers numerous advantages in terms of communication, creativity, and connection. However, the negative consequences, especially in relation to anxiety and depression, cannot be ignored.
+The study concludes that the persistent and unmoderated use of social media has a detrimental effect on adolescent mental health, exacerbating feelings of inadequacy, loneliness, and emotional vulnerability. The psychological toll is particularly severe when adolescents are constantly exposed to idealized representations of others, online harassment, or a lack of real-life social support.
+Therefore, the influence of social media on adolescent anxiety and depression is both significant and complex, demanding proactive strategies from parents, educators, policymakers, and social media companies.
+REFERENCES
+Anderson, M., & Jiang, J. (2018). Teens, Social Media & Technology 2018. Pew Research, (May), 20. Retrieved from http://assets.pewresearch.org/wpcontent/uploads/sites/14/2018/05/31102617/PI_ 2018.05.31_TeensTech_FINAL.pdf
+Appel, H., Gerlach, A. L., & Crusius, J. (2016). The interplay between Facebook use, social comparison, envy, and depression. Current Opinion in Psychology, 9(June 2016), 44–49. https://doi.org/10.1016/j.copsyc.2015.10.006
+Armstrong-Carter, E., Garrett, S. L., Nick, E. A., Prinstein, M. J., & Telzer, E. H. (2022). Momentary Links Between Adolescents’ Social Media Use and Social Experiences and Motivations: Individual Differences by Peer Susceptibility. Developmental Psychology, 59(4), 707–719. https://doi.org/10.1037/dev0001503
+Boyd, D. M., & Ellison, N. B. (2007). Social network sites: Definition, history, and scholarship. Journal of Computer-Mediated Communication, 13(1), 210–230. https://doi.org/10.1111/j.1083-6101.2007.00393.x
+Burnell, K., George, M. J., Vollet, J. W., Ehrenreich, S. E., & Underwood, M. K. (2019). Passive social networking site use and well-being: The mediating roles of social comparison and the fear of missing out. Cyberpsychology, 13(3). https://doi.org/10.5817/CP2019-3-5
+Cauberghe, V., Van Wesenbeeck, I., De Jans, S., Hudders, L., & Ponnet, K. (2021). How Adolescents Use Social Media to Cope with Feelings of Loneliness and Anxiety during COVID-19 Lockdown. Cyberpsychology, Behavior, and Social Networking, 24(4), 250–257. https://doi.org/10.1089/cyber.2020.0478
+Festinger, L. (1954). A Theory of Social Comparison Processes. Human Relations, 7(1954), 117–140.
+Huang, C. (2017). Time Spent on Social Network Sites and Psychological Well-Being: A Meta-Analysis. Cyberpsychology, Behavior, and Social Networking, 20(6), 346–354. https://doi.org/10.1089/cyber.2016.0758
+Katz, E., Blumler, J. G., & Gurevitch, M. (1973). Uses and Gratifications Research. Public Opinion Quarterly, 37(4), 509–523. Retrieved from https://doi.org/10.1086/268109
+Kelly, Y., Zilanawala, A., Booker, C., & Sacker, A. (2018). Social Media Use and Adolescent Mental Health: Findings From the UK Millennium Cohort Study. EClinicalMedicine, 6, 59–68. https://doi.org/10.1016/j.eclinm.2018.12.005
+Kross, E., Verduyn, P., Demiralp, E., Park, J., Lee, D. S., Lin, N., … Ybarra, O. (2013). Facebook Use Predicts Declines in Subjective Well-Being in Young Adults. PLoS ONE, 8(8), 1–6. https://doi.org/10.1371/journal.pone.0069841
+O’Keeffe, G. S., & Clarke-Pearson, K. (2011). Clinical report - The impact of social media on children, adolescents, and families. Pediatrics, 127(4), 800–804. https://doi.org/10.1542/peds.2011-0054
+Pedalino, F., & Camerini, A. L. (2022). Instagram Use and Body Dissatisfaction: The Mediating Role of Upward Social Comparison with Peers and Influencers among Young Females. International Journal of Environmental Research and Public Health, 19(3). https://doi.org/10.3390/ijerph19031543
+Perloff, R. M. (2014). Social Media Effects on Young Women’s Body Image Concerns: Theoretical Perspectives and an Agenda for Research. Sex Roles, 71(11–12), 363–377. https://doi.org/10.1007/s11199-014-0384-6
+Pew Research Center. (2021). Social Media Use in 2021. Retrieved from https://www.pewresearch.org/internet/2021/04/07/social-media-use-in-2021/
+Pew Research Center. (2023). Teens and social media: Key findings from Pew Research Center surveys. Retrieved from https://www.pewresearch.org/short-reads/2023/04/24/teens-and-social-media-key-findings-from-pew-research-center-surveys/
+Ryan, R. M., & Deci, E. (1985). Intrinsic Motivation and Self-Determination in Human Behavior. New York: Plenum Press. Retrieved from http://dx.doi.org/10.1007/978-1-4899-2271-7
+Statista. (2024). Average daily time spent on social media platforms among teenagers in the United States in 2023. Retrieved from https://www.statista.com/statistics/1451257/us-teens-hours-spent-social-networks-per-day/#:~:text=U.S. teens average time spent on social networks per day 2023&text=According to a 2023 survey,to 4.4 hours for boys.
+Twenge, J. M., & Campbell, W. K. (2018). Associations between screen time and lower psychological well-being among children and adolescents: Evidence from a population-based study. Preventive Medicine Reports, 12(September), 271–283. https://doi.org/10.1016/j.pmedr.2018.10.003
+Valkenburg, P. M., & Peter, J. (2011). Online communication among adolescents: An integrated model of its attraction, opportunities, and risks. Journal of Adolescent Health, 48(2), 121–127. https://doi.org/10.1016/j.jadohealth.2010.08.020
+Verduyn, P., Gugushvili, N., & Kross, E. (2022). Do Social Networking Sites Influence Well-Being? The Extended Active-Passive Model. Current Directions in Psychological Science, 31(1), 62–68. https://doi.org/10.1177/09637214211053637
+Vogel, E. A., Rose, J. P., Roberts, L. R., & Eckles, K. (2014). Social comparison, social media, and self-esteem. Psychology of Popular Media Culture, 3(4), 206–222. https://doi.org/10.1037/ppm0000047

@@ -1,0 +1,18 @@
+EduPredict AI: System Workflow & Data Flow Diagrams
+This document outlines the step-by-step workflow of the EduPredict AI system and provides explanations for the Data Flow Diagrams (DFD) to help you explain the architecture to your supervisor.
+1. System Workflow Overview
+When an educator interacts with the EduPredict system, the data moves through a seamless pipeline from the frontend to the machine learning backend and into the database.
+Data Input: The Educator interacts with the Vue.js Frontend, either by filling out a form for a single student or uploading a .csv file for batch processing.
+API Routing: The frontend transmits the raw data via RESTful API requests to the FastAPI Backend (endpoints: /predict or /predict/batch).
+Data Preprocessing: The backend receives the data and immediately processes it using the saved scikit-learn artifacts (Scalers and Encoders) to ensure the data matches the format the model was trained on.
+Machine Learning Inference: The processed features are fed into the trained algorithm (best_model.pkl). The model outputs a categorical prediction: Excellent, Average, or At-Risk.
+Explainability Engine: Simultaneously, an intervention engine analyzes the raw input (e.g., Attendance < 60%) to generate human-readable explanations and intervention suggestions.
+Data Persistence: The original inputs and the model's prediction are saved to the SQLite Database (students.db) for historical tracking and future dashboard analytics.
+Result Delivery: The backend sends the prediction, probabilities, and explanations back to the frontend.
+Visualization: The Vue.js dashboard instantly updates, rendering the results visually via dynamic charts and statistical cards.
+2. System Architecture Flowchart
+3. Data Flow Diagrams (DFD)
+Level 0 DFD (Context Diagram)
+The Context Diagram provides a high-level view of the entire system as a single process interacting with external entities. 
+Level 1 DFD
+The Level 1 DFD breaks down the main system into its primary sub-processes and data stores. 
